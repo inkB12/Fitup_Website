@@ -37,7 +37,6 @@ const COACHES = [
 
 export default function CoachesSection() {
   const router = useRouter();
-  const mobileCoach = COACHES.find((coach) => coach.position === "center");
 
   return (
     <section className="relative w-full overflow-hidden py-24">
@@ -62,50 +61,6 @@ export default function CoachesSection() {
             (PT) chuyên nghiệp ngay trên ứng dụng.
           </p>
         </motion.div>
-
-        <div className="mt-4 w-full md:hidden">
-          {mobileCoach && (
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.35 }}
-              className="group relative mx-auto h-[390px] w-full max-w-[360px] overflow-hidden rounded-[2rem] border border-[#d68c45]/50 bg-zinc-900 shadow-2xl"
-            >
-              <Image
-                src={mobileCoach.image}
-                alt={mobileCoach.name}
-                fill
-                className="object-cover opacity-90 transition-transform duration-150 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-
-              <div className="absolute bottom-0 left-0 w-full p-6 text-left">
-                <div className="mb-2 flex items-center justify-between">
-                  <span className="rounded-full bg-[#d68c45]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#d68c45]">
-                    AI BOT
-                  </span>
-                  <div className="flex items-center gap-1 text-yellow-400">
-                    <Star className="h-4 w-4 fill-current" />
-                    <span className="text-sm font-semibold">{mobileCoach.rating}</span>
-                  </div>
-                </div>
-
-                <h3 className="mb-1 text-2xl font-bold text-white">{mobileCoach.name}</h3>
-                <p className="mb-4 text-sm text-zinc-300">{mobileCoach.role}</p>
-
-                <button
-                  type="button"
-                  onClick={() => router.push("/download-app")}
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] py-3 text-sm font-semibold text-white shadow-lg transition-all duration-150 hover:brightness-110"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  Start now
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </div>
 
         <div className="relative mt-12 hidden h-[600px] w-full items-center justify-center md:flex">
           <div className="absolute left-1/2 top-1/2 -z-10 h-[500px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d68c45]/30 blur-[120px]" />

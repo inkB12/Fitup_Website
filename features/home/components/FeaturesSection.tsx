@@ -27,10 +27,6 @@ export default function FeaturesSection() {
     <section className="relative w-full overflow-hidden py-12">
       <div className="container mx-auto max-w-7xl px-6">
         <div className="mb-12 flex flex-col items-center gap-5 md:mb-14 md:flex-row md:items-center md:justify-between">
-          <p className="text-center text-lg font-medium leading-normal tracking-[1.5px] text-white [font-family:'Montserrat',Helvetica] sm:text-xl md:text-left md:text-2xl md:tracking-[3px]">
-            Transform Your Body, Transform Your Life.
-          </p>
-
           <div className="flex h-[41px] w-full max-w-[287px] items-center rounded-[36px] border-[1.2px] border-solid border-[#3f3f3f] px-4">
             <div className="flex w-full items-center justify-center gap-3">
               <Heart className="h-[11px] w-[11px] fill-[#d68c45] text-[#d68c45]" />
@@ -49,20 +45,25 @@ export default function FeaturesSection() {
               })}
             </div>
           </div>
+          <p className="text-center text-lg font-medium leading-normal tracking-[1.5px] text-white [font-family:'Montserrat',Helvetica] sm:text-xl md:text-left md:text-2xl md:tracking-[3px]">
+            Transform Your Body, Transform Your Life.
+          </p>
+
+          
         </div>
 
         {/* Features Zig-Zag Layout */}
         <div className="relative flex flex-col gap-24 md:gap-40">
           {/* Feature 1: Image Left, Text Right */}
           <div className="relative z-10 flex flex-col items-center md:flex-row md:justify-start">
-            <div className="pointer-events-none absolute -top-24 right-[6%] z-0 h-[317px] w-[316px] rounded-[158px/158.5px] blur-[50px] bg-[linear-gradient(180deg,rgba(242,47,70,0.63)_0%,rgba(214,140,69,0.63)_100%,rgba(112,97,163,0.63)_100%)]" />
+            <div className="pointer-events-none absolute -top-24 right-[6%] z-0 hidden h-[317px] w-[316px] rounded-[158px/158.5px] blur-[50px] bg-[linear-gradient(180deg,rgba(242,47,70,0.63)_0%,rgba(214,140,69,0.63)_100%,rgba(112,97,163,0.63)_100%)] md:block" />
             {/* Image & Widgets Group */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.4 }}
-              className="relative h-[340px] w-full sm:h-[420px] md:h-[450px] md:w-[50%] lg:w-[45%]"
+              className="relative hidden h-[450px] md:block md:w-[50%] lg:w-[45%]"
             >
               {/* Main Image */}
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-[#d68c45]/10">
@@ -110,7 +111,7 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="group relative z-10 mt-16 w-full rounded-[2rem] border border-zinc-800 bg-zinc-950/90 p-6 shadow-2xl backdrop-blur-sm transition-all hover:border-[#d68c45]/30 sm:p-8 md:mt-0 md:-ml-24 md:w-[55%] md:p-12 lg:w-[50%]"
+              className="group relative z-10 mt-0 w-full rounded-[2rem] border border-zinc-800 bg-zinc-950/90 p-6 shadow-2xl backdrop-blur-sm transition-all hover:border-[#d68c45]/30 sm:p-8 md:-ml-24 md:w-[55%] md:p-12 lg:w-[50%]"
             >
               <div className="relative z-10">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d68c45]/10 text-[#d68c45]">
@@ -137,14 +138,14 @@ export default function FeaturesSection() {
 
           {/* Feature 2: Text Left, Image Right */}
           <div className="relative z-10 flex flex-col-reverse items-center md:flex-row md:justify-end">
-            <div className="pointer-events-none absolute -top-24 left-[6%] z-0 h-[317px] w-[316px] rounded-[158px/158.5px] blur-[50px] bg-[linear-gradient(180deg,rgba(242,47,70,0.63)_0%,rgba(214,140,69,0.63)_100%,rgba(112,97,163,0.63)_100%)]" />
+            <div className="pointer-events-none absolute -top-24 left-[6%] z-0 hidden h-[317px] w-[316px] rounded-[158px/158.5px] blur-[50px] bg-[linear-gradient(180deg,rgba(242,47,70,0.63)_0%,rgba(214,140,69,0.63)_100%,rgba(112,97,163,0.63)_100%)] md:block" />
             {/* Text Card - Overlapping */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="group relative z-20 mt-16 w-full rounded-[2rem] border border-zinc-800 bg-zinc-950/90 p-6 shadow-2xl backdrop-blur-sm transition-all hover:border-[#d68c45]/30 sm:p-8 md:mt-0 md:-mr-24 md:w-[55%] md:p-12 lg:w-[50%]"
+              className="group relative z-20 mt-0 w-full rounded-[2rem] border border-zinc-800 bg-zinc-950/90 p-6 shadow-2xl backdrop-blur-sm transition-all hover:border-[#d68c45]/30 sm:p-8 md:-mr-24 md:w-[55%] md:p-12 lg:w-[50%]"
             >
               <div className="relative z-10">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d68c45]/10 text-[#d68c45]">
@@ -174,7 +175,7 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.4 }}
-              className="relative h-[340px] w-full sm:h-[420px] md:h-[450px] md:w-[50%] lg:w-[45%]"
+              className="relative hidden h-[450px] md:block md:w-[50%] lg:w-[45%]"
             >
               {/* Main Image */}
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-[#d68c45]/10">

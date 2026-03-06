@@ -44,13 +44,8 @@ function KnowMoreCard({ className }: KnowMoreCardProps) {
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-x-hidden pb-0 pt-4 md:pt-6">
-      <div className="mx-auto w-full max-w-[400px] px-3 pb-2 sm:max-w-[520px] md:hidden">
-        <img className="w-full" alt="Vector" src={vector2.src} />
-        <KnowMoreCard className="relative -mt-14 ml-auto h-[140px] w-[330px] scale-[0.9] sm:scale-100" />
-      </div>
-
-      <div className="relative mx-auto hidden h-[600px] w-full max-w-[1440px] md:block">
+    <section className="relative hidden w-full overflow-x-hidden pb-0 pt-6 md:block">
+      <div className="relative mx-auto h-[600px] w-full max-w-[1440px]">
         <img
           className="absolute top-[40px] left-[calc(50.00%_-_651px)] h-[540px] w-[1302px]"
           alt="Vector"

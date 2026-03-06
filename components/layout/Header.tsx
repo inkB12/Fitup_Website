@@ -12,6 +12,8 @@ const NAV_LINKS = [
   { name: "BLOG", href: "/blogs" },
 ];
 
+const MOBILE_NAV_LINKS = [{ name: "HOME", href: "/" }, ...NAV_LINKS];
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -119,7 +121,7 @@ export default function Header() {
             className="overflow-hidden border-t border-zinc-800 bg-[#121212] backdrop-blur-2xl md:hidden"
           >
             <nav className="flex flex-col gap-6 px-6 py-6">
-              {NAV_LINKS.map((link) => (
+              {MOBILE_NAV_LINKS.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -144,4 +146,3 @@ export default function Header() {
     </header>
   );
 }
-
