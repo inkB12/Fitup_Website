@@ -1,20 +1,27 @@
 ﻿"use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone } from "lucide-react";
+import fitupLogo from "@/components/assets/Fitness_Logo__1_-removebg-preview.png";
 
 export default function Topbar() {
   return (
     <div className="hidden w-full border-b border-zinc-800/80 bg-[#121212] py-3 lg:block">
       <div className="container mx-auto flex max-w-7xl items-center justify-between px-6">
         {/* Logo Section with Hover Effect */}
-        <Link href="/" className="group flex items-center gap-3">
-          <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 transition-all duration-150 group-hover:border-[#d68c45] group-hover:shadow-[0_0_15px_rgba(214,140,69,0.3)]">
-            <div className="h-4 w-1.5 bg-gradient-to-b from-[#d68c45] to-[#d68c45] rounded-sm" />
-          </div>
-          <span className="text-xl font-black tracking-[0.2em] text-white transition-colors group-hover:text-[#d68c45]">
-            FITUP
+        <Link href="/" className="group inline-flex items-center gap-3">
+          <Image
+            src={fitupLogo}
+            alt="FITUP Logo"
+            width={56}
+            height={56}
+            className="h-14 w-14 object-contain transition-transform duration-150 group-hover:scale-105"
+            priority
+          />
+          <span className="text-xl font-black uppercase tracking-[0.18em] text-white transition-colors duration-150 group-hover:text-[#d68c45]">
+            FIT UP
           </span>
         </Link>
 
@@ -68,6 +75,7 @@ export default function Topbar() {
     </div>
   );
 }
+
 
 
 

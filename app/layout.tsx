@@ -2,7 +2,6 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-import Topbar from "@/components/layout/Topbar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
@@ -30,7 +29,6 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} flex min-h-screen flex-col font-sans antialiased`}
       >
-        <Topbar />
         <Header />
 
         <main className="flex w-full flex-1 flex-col">{children}</main>

@@ -1,82 +1,105 @@
 ﻿"use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { Search, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import fitupLogo from "@/components/assets/Fitness_Logo__1_-removebg-preview.png";
+
+const NAV_LINKS = [
+  { name: "ABOUT US", href: "/about" },
+  { name: "BLOG", href: "/blogs" },
+];
 
 export default function Header() {
-  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const lastScrollY = useRef(0);
 
-  // Hiệu ứng thay đổi background khi cuộn trang
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      const currentScrollY = window.scrollY;
+      const scrollDelta = Math.abs(currentScrollY - lastScrollY.current);
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About us", href: "/about" },
-    { name: "Workout Plan", href: "/workout-plan" },
-    { name: "Become PT", href: "/become-pt" },
-    { name: "Blogs", href: "/blogs" },
-  ];
+      setIsScrolled(currentScrollY > 20);
+
+      if (isMobileOpen) {
+        setIsHeaderVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY <= 10) {
+        setIsHeaderVisible(true);
+      } else if (currentScrollY > lastScrollY.current && scrollDelta > 4) {
+        setIsHeaderVisible(false);
+      } else if (currentScrollY < lastScrollY.current && scrollDelta > 4) {
+        setIsHeaderVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    lastScrollY.current = window.scrollY;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMobileOpen]);
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-200 ${
+      className={`sticky top-0 z-50 w-full transform transition-[transform,background-color,padding,box-shadow,border-color] duration-200 ${
+        isHeaderVisible ? "translate-y-0" : "-translate-y-full"
+      } ${
         isScrolled
-          ? "border-b border-zinc-800 bg-[#121212] backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] py-2"
-          : "border-b border-zinc-800/50 bg-[#121212] backdrop-blur-md py-4"
+          ? "border-b border-zinc-800 bg-[#121212] py-2 shadow-[0_10px_30px_rgba(0,0,0,0.5)] backdrop-blur-xl"
+          : "border-b border-zinc-800/50 bg-[#121212] py-4 backdrop-blur-md"
       }`}
     >
-      {/* Đường viền ánh sáng chìm ở đáy Header */}
       <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#d68c45]/20 to-transparent" />
 
-      <div className="container mx-auto flex h-12 max-w-7xl items-center justify-between px-6">
-        {/* Navigation - Desktop */}
-        <nav className="hidden items-center gap-1 md:flex">
-          {navLinks.map((link) => {
-            const isActive =
-              pathname === link.href ||
-              (link.href !== "/" && pathname.startsWith(link.href));
+      <div className="container mx-auto flex h-12 max-w-7xl items-center justify-between gap-4 px-6">
+        <Link href="/" className="group inline-flex items-center gap-3">
+          <Image
+            src={fitupLogo}
+            alt="FITUP Logo"
+            width={56}
+            height={56}
+            className="h-12 w-12 object-contain transition-transform duration-150 group-hover:scale-105 md:h-14 md:w-14"
+            priority
+          />
+          <span className="text-lg font-black uppercase tracking-[0.18em] text-white transition-colors duration-150 group-hover:text-[#d68c45] md:text-xl">
+            FIT UP
+          </span>
+        </Link>
 
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="relative px-5 py-2.5 text-sm font-medium transition-colors"
-              >
-                {/* Active Pill Animation */}
-                {isActive && (
-                  <motion.div
-                    layoutId="active-nav-pill"
-                    className="absolute inset-0 rounded-full bg-zinc-800/80 border border-zinc-700/50"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-                {/* Text (Z-10 so it's above the pill) */}
-                <span
-                  className={`relative z-10 ${isActive ? "text-[#d68c45] drop-shadow-sm" : "text-zinc-400 hover:text-white"}`}
-                >
-                  {link.name}
-                </span>
-              </Link>
-            );
-          })}
-        </nav>
+        <div className="hidden items-center gap-4 md:flex">
+          <nav className="flex items-center gap-8">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-base font-bold uppercase tracking-[0.16em] text-white transition-colors hover:text-zinc-300"
+            >
+              {link.name}
+            </Link>
+          ))}
+          </nav>
 
-        {/* Mobile Menu Button */}
-        <div className="flex md:hidden items-center">
+          <Link
+            href="/download-app"
+            className="relative inline-flex items-center rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] px-7 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition-all duration-150 hover:brightness-110"
+          >
+            START NOW
+          </Link>
+        </div>
+
+        <div className="flex items-center md:hidden">
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="text-zinc-400 hover:text-[#d68c45] transition-colors p-2"
+            className="p-2 text-zinc-300 transition-colors hover:text-white"
+            aria-label="Toggle menu"
           >
             {isMobileOpen ? (
               <X className="h-6 w-6" />
@@ -85,60 +108,35 @@ export default function Header() {
             )}
           </button>
         </div>
-
-        {/* Search Bar */}
-        <div className="group relative hidden md:block w-72">
-          {/* Glow effect on focus */}
-          <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-[#d68c45] to-red-500 opacity-0 blur-md transition-opacity duration-150 group-focus-within:opacity-40" />
-
-          <input
-            type="text"
-            placeholder="Search..."
-            className="relative h-10 w-full rounded-full border border-zinc-700 bg-zinc-900/60 pl-5 pr-12 text-sm text-white placeholder-zinc-500 backdrop-blur-sm transition-all focus:border-[#d68c45] focus:bg-zinc-950 focus:outline-none"
-          />
-          <Search className="absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400 transition-colors group-focus-within:text-[#d68c45]" />
-        </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-zinc-800 bg-[#121212] backdrop-blur-2xl overflow-hidden"
+            className="overflow-hidden border-t border-zinc-800 bg-[#121212] backdrop-blur-2xl md:hidden"
           >
-            <nav className="flex flex-col px-6 py-6 gap-6">
-              {navLinks.map((link) => {
-                const isActive =
-                  pathname === link.href ||
-                  (link.href !== "/" && pathname.startsWith(link.href));
-                return (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsMobileOpen(false)}
-                    className={`text-lg font-medium transition-colors ${
-                      isActive
-                        ? "text-[#d68c45]"
-                        : "text-zinc-400 hover:text-white"
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                );
-              })}
+            <nav className="flex flex-col gap-6 px-6 py-6">
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileOpen(false)}
+                  className="text-base font-bold uppercase tracking-[0.12em] text-white transition-colors hover:text-zinc-300"
+                >
+                  {link.name}
+                </Link>
+              ))}
 
-              {/* Mobile Search Bar */}
-              <div className="relative w-full mt-4">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="h-12 w-full rounded-full border border-zinc-700 bg-zinc-900/50 pl-5 pr-12 text-base text-white focus:border-[#d68c45] focus:outline-none"
-                />
-                <Search className="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-zinc-400" />
-              </div>
+              <Link
+                href="/download-app"
+                onClick={() => setIsMobileOpen(false)}
+                className="inline-flex w-fit items-center rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition-all duration-150 hover:brightness-110"
+              >
+                START NOW
+              </Link>
             </nav>
           </motion.div>
         )}
@@ -146,6 +144,4 @@ export default function Header() {
     </header>
   );
 }
-
-
 

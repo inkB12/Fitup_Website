@@ -84,11 +84,11 @@ export default function FeaturesSection() {
                   <span className="text-xs font-semibold text-zinc-300">
                     Daily Goal
                   </span>
-                  <span className="text-xs font-bold text-[#d68c45]">85%</span>
+                  <span className="text-xs font-bold text-[#d68c45]">100%</span>
                 </div>
                 {/* Progress Bar Mock */}
                 <div className="mb-4 h-2 w-full overflow-hidden rounded-full bg-zinc-800">
-                  <div className="h-full w-[85%] rounded-full bg-gradient-to-r from-[#d68c45] to-[#d68c45]" />
+                  <div className="h-full w-[100%] rounded-full bg-gradient-to-r from-[#d68c45] to-[#d68c45]" />
                 </div>
                 {/* Checkbox List Mock */}
                 <div className="flex flex-col gap-2">

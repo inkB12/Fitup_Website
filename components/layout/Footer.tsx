@@ -34,22 +34,7 @@ export default function Footer() {
             nghiệp 24/7.
           </p>
 
-          {/* Newsletter Input */}
-          <div className="mt-4 flex flex-col gap-3">
-            <span className="text-sm font-semibold text-white">
-              Đăng ký nhận bí quyết tập luyện
-            </span>
-            <div className="relative flex w-full max-w-sm items-center">
-              <input
-                type="email"
-                placeholder="Nhập email của bạn..."
-                className="h-12 w-full rounded-full border border-zinc-800 bg-zinc-900/50 pl-5 pr-14 text-sm text-white focus:border-[#d68c45] focus:outline-none"
-              />
-              <button className="absolute right-1 top-1 flex h-10 w-10 items-center justify-center rounded-full bg-[linear-gradient(135deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] text-white transition-all hover:scale-105 hover:brightness-110">
-                <Send className="h-4 w-4" />
-              </button>
-            </div>
-          </div>
+         
         </div>
 
         {/* Links Container */}

@@ -1,10 +1,13 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
-import { Star, Apple, Play, Download, Smartphone } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Download, Smartphone } from "lucide-react";
 import vector4 from "@/components/assets/vector-4.svg";
 
 export default function CtaSection() {
+  const router = useRouter();
+
   return (
     <section className="relative w-full overflow-hidden py-32">
       {/* Abstract Background Effects */}
@@ -53,7 +56,11 @@ export default function CtaSection() {
           <div className="relative group">
             {/* Glow effect behind main button */}
             <div className="absolute -inset-1 rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] opacity-70 blur-lg transition-all duration-500 group-hover:opacity-100 group-hover:blur-xl" />
-            <button className="relative flex items-center gap-3 rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] px-10 py-4 text-lg font-bold text-white shadow-xl transition-transform duration-300 group-hover:scale-105 group-hover:brightness-110">
+            <button
+              type="button"
+              onClick={() => router.push("/download-app")}
+              className="relative flex items-center gap-3 rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] px-10 py-4 text-lg font-bold text-white shadow-xl transition-transform duration-300 group-hover:scale-105 group-hover:brightness-110"
+            >
               <Download className="h-5 w-5" />
               Bắt Đầu Hành Trình Ngay
             </button>

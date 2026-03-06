@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import {
   Dumbbell,
   Activity,
@@ -41,29 +42,10 @@ const COACHES = [
 ];
 
 export default function CoachesSection() {
+  const router = useRouter();
+
   return (
     <section className="relative w-full overflow-hidden py-24">
-      {/* Floating Background Icons */}
-      <motion.div
-        animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute left-10 top-32 z-0 hidden opacity-20 md:block"
-      >
-        <Dumbbell className="h-24 w-24 text-[#d68c45]" />
-      </motion.div>
-      <motion.div
-        animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
-        transition={{
-          duration: 3.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-        className="absolute right-10 bottom-32 z-0 hidden opacity-20 md:block"
-      >
-        <Activity className="h-32 w-32 text-[#d68c45]" />
-      </motion.div>
-
       <div className="container mx-auto flex max-w-7xl flex-col items-center px-6">
         {/* Section Header */}
         <motion.div
@@ -174,13 +156,17 @@ export default function CoachesSection() {
                     <div
                       className={`overflow-hidden transition-all duration-150 ${isCenter ? "max-h-12 opacity-100" : "max-h-0 opacity-0 group-hover:max-h-12 group-hover:opacity-100"}`}
                     >
-                      <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] py-3 text-sm font-semibold text-white shadow-lg transition-all duration-150 hover:brightness-110">
+                      <button
+                        type="button"
+                        onClick={() => router.push("/download-app")}
+                        className="flex w-full items-center justify-center gap-2 rounded-xl bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] py-3 text-sm font-semibold text-white shadow-lg transition-all duration-150 hover:brightness-110"
+                      >
                         {isCenter ? (
                           <MessageCircle className="h-4 w-4" />
                         ) : (
                           <CalendarCheck className="h-4 w-4" />
                         )}
-                        {isCenter ? "Chat Now" : "Book Session"}
+                        Start now
                       </button>
                     </div>
                   </div>
