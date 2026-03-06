@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const VALUES = [
   {
@@ -27,6 +27,8 @@ const VALUES = [
 ];
 
 export default function CoreValuesSection() {
+  const router = useRouter();
+
   return (
     <section className="relative w-full overflow-hidden pb-32 pt-16 bg-zinc-950">
       {/* Background abstract glow */}
@@ -80,7 +82,11 @@ export default function CoreValuesSection() {
         >
           {/* Pulsing glow effect */}
           <div className="absolute -inset-1 rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] opacity-60 blur-lg transition-all duration-200 group-hover:opacity-100 group-hover:blur-xl" />
-          <button className="relative flex items-center gap-3 rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] px-12 py-4 text-lg font-bold text-white shadow-xl transition-transform duration-150 group-hover:scale-105 group-hover:brightness-110">
+          <button
+            type="button"
+            onClick={() => router.push("/download-app")}
+            className="relative flex items-center gap-3 rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] px-12 py-4 text-lg font-bold text-white shadow-xl transition-transform duration-150 group-hover:scale-105 group-hover:brightness-110"
+          >
             Bắt Đầu Hành Trình Cùng Chúng Tôi
           </button>
         </motion.div>
@@ -88,6 +94,3 @@ export default function CoreValuesSection() {
     </section>
   );
 }
-
-
-
