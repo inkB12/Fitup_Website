@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Facebook,
@@ -8,8 +9,8 @@ import {
   Youtube,
   Music2,
   ArrowRight,
-  Send,
 } from "lucide-react";
+import fitupLogo from "@/components/assets/Fitness_Logo__1_-removebg-preview.png";
 
 export default function Footer() {
   return (
@@ -21,9 +22,14 @@ export default function Footer() {
         {/* Brand & Newsletter */}
         <div className="flex max-w-md flex-col gap-6">
           <Link href="/" className="group flex items-center gap-3 w-fit">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#d68c45] to-[#d68c45] shadow-lg shadow-[#d68c45]/20">
-              <div className="h-5 w-2 bg-white rounded-sm" />
-            </div>
+            <Image
+              src={fitupLogo}
+              alt="FITUP Logo"
+              width={56}
+              height={56}
+              className="h-12 w-12 object-contain transition-transform duration-150 group-hover:scale-105 md:h-14 md:w-14"
+              priority
+            />
             <span className="text-3xl font-black tracking-widest text-white">
               FITUP
             </span>
@@ -47,7 +53,6 @@ export default function Footer() {
             <ul className="flex flex-col gap-4 text-sm">
               {[
                 "Về Chúng Tôi",
-                "Gói Tập Luyện",
                 "Trở Thành PT",
                 "Blog Kiến Thức",
               ].map((item, i) => (
@@ -56,7 +61,6 @@ export default function Footer() {
                     href="#"
                     className="group flex items-center gap-2 transition-colors hover:text-[#d68c45]"
                   >
-                    <ArrowRight className="h-3 w-3 -translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
                     <span>{item}</span>
                   </Link>
                 </li>
@@ -73,8 +77,7 @@ export default function Footer() {
               {[
                 "Bảo mật thông tin",
                 "Điều khoản dịch vụ",
-                "Chính sách hoàn tiền",
-                "Quy chế hoạt động",
+                "Chính sách hoàn tiền"
               ].map((item, i) => (
                 <li key={i}>
                   <Link

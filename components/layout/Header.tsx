@@ -70,7 +70,7 @@ export default function Header() {
             priority
           />
           <span className="text-lg font-black uppercase tracking-[0.18em] text-white transition-colors duration-150 group-hover:text-[#d68c45] md:text-xl">
-            FIT UP
+            FITUP
           </span>
         </Link>
 

@@ -70,9 +70,6 @@ export default function NewsDataSection() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
             <div className="relative z-10 flex h-full flex-col justify-end p-8">
-              <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-lg bg-blue-500/20 px-3 py-1 text-xs font-bold text-blue-400 backdrop-blur-md">
-                <Brain className="h-4 w-4" /> Công Nghệ AI
-              </div>
               <h3 className="mb-2 max-w-lg text-2xl font-bold text-white md:text-3xl">
                 Giảm 40% Nguy Cơ Chấn Thương Nhờ Phân Tích Tư Thế Real-time
               </h3>
@@ -101,17 +98,12 @@ export default function NewsDataSection() {
             }
             className="group relative col-span-1 flex cursor-pointer flex-col justify-between overflow-hidden rounded-[2rem] border border-zinc-800 bg-zinc-900 p-8 transition-colors hover:border-[#d68c45]/50"
           >
-            <div>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-lg bg-[#d68c45]/20 px-3 py-1 text-xs font-bold text-[#d68c45]">
-                <TrendingUp className="h-4 w-4" /> Dữ Liệu
-              </div>
-              <h3 className="mb-2 text-5xl font-black text-white">
+            <h3 className="mb-2 text-5xl font-black text-white">
                 85<span className="text-3xl text-[#d68c45]">%</span>
               </h3>
               <h4 className="text-lg font-bold text-zinc-100">
                 Tỷ lệ duy trì thói quen
               </h4>
-            </div>
             <p className="text-sm text-zinc-400">
               Người dùng tuân thủ thực đơn thuần Việt của FITUP có khả năng duy trì
               vóc dáng lâu dài hơn gấp 3 lần so với các chế độ ăn kiêng phương Tây.
@@ -140,9 +132,6 @@ export default function NewsDataSection() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
 
             <div className="relative z-10 flex h-full flex-col justify-end p-8">
-              <div className="mb-2 inline-flex w-fit items-center gap-2 rounded-lg bg-green-500/20 px-3 py-1 text-xs font-bold text-green-400">
-                <Activity className="h-4 w-4" /> Dinh Dưỡng
-              </div>
               <h3 className="text-xl font-bold text-white">
                 Carb vs Protein: Tỷ lệ vàng cho cơ địa người Việt
               </h3>
