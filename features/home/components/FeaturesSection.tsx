@@ -26,13 +26,13 @@ export default function FeaturesSection() {
   return (
     <section className="relative w-full overflow-hidden py-12">
       <div className="container mx-auto max-w-7xl px-6">
-        <div className="relative mx-auto mb-14 h-[60px] w-[1302px] max-w-full">
-          <p className="absolute top-[3px] left-[535px] [font-family:'Montserrat',Helvetica] font-medium text-[#ffffff] text-2xl text-center tracking-[3.00px] leading-[normal]">
+        <div className="mb-12 flex flex-col items-center gap-5 md:mb-14 md:flex-row md:items-center md:justify-between">
+          <p className="text-center text-lg font-medium leading-normal tracking-[1.5px] text-white [font-family:'Montserrat',Helvetica] sm:text-xl md:text-left md:text-2xl md:tracking-[3px]">
             Transform Your Body, Transform Your Life.
           </p>
 
-          <div className="absolute top-0 left-[80px] flex h-[41px] w-[287px] items-center justify-center rounded-[36px] border-[1.2px] border-solid border-[#3f3f3f]">
-            <div className="flex items-center justify-center gap-4">
+          <div className="flex h-[41px] w-full max-w-[287px] items-center rounded-[36px] border-[1.2px] border-solid border-[#3f3f3f] px-4">
+            <div className="flex w-full items-center justify-center gap-3">
               <Heart className="h-[11px] w-[11px] fill-[#d68c45] text-[#d68c45]" />
               <p className="[font-family:'Montserrat',Helvetica] font-medium text-[#d68c45] text-[16.8px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
                 Follow
@@ -52,7 +52,7 @@ export default function FeaturesSection() {
         </div>
 
         {/* Features Zig-Zag Layout */}
-        <div className="relative flex flex-col gap-32 md:gap-40">
+        <div className="relative flex flex-col gap-24 md:gap-40">
           {/* Feature 1: Image Left, Text Right */}
           <div className="relative z-10 flex flex-col items-center md:flex-row md:justify-start">
             <div className="pointer-events-none absolute -top-24 right-[6%] z-0 h-[317px] w-[316px] rounded-[158px/158.5px] blur-[50px] bg-[linear-gradient(180deg,rgba(242,47,70,0.63)_0%,rgba(214,140,69,0.63)_100%,rgba(112,97,163,0.63)_100%)]" />
@@ -62,7 +62,7 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.4 }}
-              className="relative h-[450px] w-full md:w-[50%] lg:w-[45%]"
+              className="relative h-[340px] w-full sm:h-[420px] md:h-[450px] md:w-[50%] lg:w-[45%]"
             >
               {/* Main Image */}
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-[#d68c45]/10">
@@ -78,7 +78,7 @@ export default function FeaturesSection() {
               {/* Floating App Widget: Progress & Tasks */}
               <motion.div
                 whileHover={{ y: -5 }}
-                className="absolute -bottom-10 -right-4 z-[60] w-64 rounded-2xl border border-zinc-700/50 bg-black/60 p-5 backdrop-blur-md shadow-xl sm:-right-10"
+                className="absolute -bottom-8 left-1/2 z-[60] w-[90%] max-w-64 -translate-x-1/2 rounded-2xl border border-zinc-700/50 bg-black/60 p-4 backdrop-blur-md shadow-xl md:-bottom-10 md:-right-10 md:left-auto md:w-64 md:translate-x-0 md:p-5"
               >
                 <div className="mb-3 flex items-center justify-between">
                   <span className="text-xs font-semibold text-zinc-300">
@@ -110,13 +110,13 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="group relative z-10 -mt-20 w-[90%] rounded-[2rem] border border-zinc-800 bg-zinc-950/90 p-8 shadow-2xl backdrop-blur-sm transition-all hover:border-[#d68c45]/30 md:mt-0 md:-ml-24 md:w-[55%] md:p-12 lg:w-[50%]"
+              className="group relative z-10 mt-16 w-full rounded-[2rem] border border-zinc-800 bg-zinc-950/90 p-6 shadow-2xl backdrop-blur-sm transition-all hover:border-[#d68c45]/30 sm:p-8 md:mt-0 md:-ml-24 md:w-[55%] md:p-12 lg:w-[50%]"
             >
               <div className="relative z-10">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d68c45]/10 text-[#d68c45]">
                 <TrendingUp className="h-6 w-6" />
               </div>
-              <h3 className="mb-4 text-3xl font-bold leading-snug text-white">
+              <h3 className="mb-4 text-2xl font-bold leading-snug text-white md:text-3xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d68c45] to-[#d68c45]">
                   Personalized
                 </span>
@@ -144,13 +144,13 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="group relative z-20 -mt-20 w-[90%] rounded-[2rem] border border-zinc-800 bg-zinc-950/90 p-8 shadow-2xl backdrop-blur-sm transition-all hover:border-[#d68c45]/30 md:mt-0 md:-mr-24 md:w-[55%] md:p-12 lg:w-[50%]"
+              className="group relative z-20 mt-16 w-full rounded-[2rem] border border-zinc-800 bg-zinc-950/90 p-6 shadow-2xl backdrop-blur-sm transition-all hover:border-[#d68c45]/30 sm:p-8 md:mt-0 md:-mr-24 md:w-[55%] md:p-12 lg:w-[50%]"
             >
               <div className="relative z-10">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d68c45]/10 text-[#d68c45]">
                 <Activity className="h-6 w-6" />
               </div>
-              <h3 className="mb-4 text-3xl font-bold leading-snug text-white">
+              <h3 className="mb-4 text-2xl font-bold leading-snug text-white md:text-3xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d68c45] to-[#d68c45]">
                   Localized
                 </span>
@@ -174,7 +174,7 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.4 }}
-              className="relative h-[450px] w-full md:w-[50%] lg:w-[45%]"
+              className="relative h-[340px] w-full sm:h-[420px] md:h-[450px] md:w-[50%] lg:w-[45%]"
             >
               {/* Main Image */}
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-[#d68c45]/10">
@@ -190,7 +190,7 @@ export default function FeaturesSection() {
               {/* Floating App Widget: Calorie & Community */}
               <motion.div
                 whileHover={{ y: -5 }}
-                className="absolute -bottom-10 -left-4 z-[60] w-64 rounded-2xl border border-zinc-700/50 bg-black/60 p-5 backdrop-blur-md shadow-xl sm:-left-10"
+                className="absolute -bottom-8 left-1/2 z-[60] w-[90%] max-w-64 -translate-x-1/2 rounded-2xl border border-zinc-700/50 bg-black/60 p-4 backdrop-blur-md shadow-xl md:-bottom-10 md:-left-10 md:w-64 md:translate-x-0 md:p-5"
               >
                 <div className="mb-4 flex items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#d68c45]/20">
