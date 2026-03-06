@@ -15,13 +15,13 @@ export default function Footer() {
   return (
     <footer className="relative w-full overflow-hidden border-t border-zinc-800 bg-black pb-6 pt-20 text-zinc-400">
       {/* Background Glow */}
-      <div className="absolute bottom-0 right-0 h-[300px] w-[500px] translate-x-1/3 translate-y-1/3 rounded-full bg-orange-600/10 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 h-[300px] w-[500px] translate-x-1/3 translate-y-1/3 rounded-full bg-[#d68c45]/10 blur-[120px] pointer-events-none" />
 
       <div className="container relative z-10 mx-auto mb-16 flex max-w-7xl flex-col justify-between gap-16 px-6 lg:flex-row lg:gap-12">
         {/* Brand & Newsletter */}
         <div className="flex max-w-md flex-col gap-6">
           <Link href="/" className="group flex items-center gap-3 w-fit">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 shadow-lg shadow-orange-500/20">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#d68c45] to-[#d68c45] shadow-lg shadow-[#d68c45]/20">
               <div className="h-5 w-2 bg-white rounded-sm" />
             </div>
             <span className="text-3xl font-black tracking-widest text-white">
@@ -43,9 +43,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Nhập email của bạn..."
-                className="h-12 w-full rounded-full border border-zinc-800 bg-zinc-900/50 pl-5 pr-14 text-sm text-white focus:border-orange-500 focus:outline-none"
+                className="h-12 w-full rounded-full border border-zinc-800 bg-zinc-900/50 pl-5 pr-14 text-sm text-white focus:border-[#d68c45] focus:outline-none"
               />
-              <button className="absolute right-1 top-1 flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 text-white transition-transform hover:scale-105 hover:bg-orange-600">
+              <button className="absolute right-1 top-1 flex h-10 w-10 items-center justify-center rounded-full bg-[linear-gradient(135deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] text-white transition-all hover:scale-105 hover:brightness-110">
                 <Send className="h-4 w-4" />
               </button>
             </div>
@@ -69,7 +69,7 @@ export default function Footer() {
                 <li key={i}>
                   <Link
                     href="#"
-                    className="group flex items-center gap-2 transition-colors hover:text-orange-500"
+                    className="group flex items-center gap-2 transition-colors hover:text-[#d68c45]"
                   >
                     <ArrowRight className="h-3 w-3 -translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
                     <span>{item}</span>
@@ -94,7 +94,7 @@ export default function Footer() {
                 <li key={i}>
                   <Link
                     href="#"
-                    className="transition-colors hover:text-orange-500"
+                    className="transition-colors hover:text-[#d68c45]"
                   >
                     {item}
                   </Link>
@@ -110,17 +110,13 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-4 text-sm">
               <li>
-                <strong className="text-white">A:</strong> ĐH FPT, TP. Hồ Chí
-                Minh
+                www.fitup.com
               </li>
               <li>
-                <strong className="text-white">E:</strong> hello@fitup.com
+                Email: hello@fitup.com
               </li>
               <li>
-                <strong className="text-white">W:</strong> www.fitup.com
-              </li>
-              <li>
-                <strong className="text-white">T:</strong> 0987 654 321
+                Tel: 0987 654 321
               </li>
             </ul>
           </div>
@@ -130,7 +126,7 @@ export default function Footer() {
       {/* Bottom Bar: Copyright & Socials */}
       <div className="container relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-zinc-800/80 px-6 pt-8 text-xs sm:flex-row md:text-sm">
         <p className="flex items-center gap-2">
-          © 2026 FITUP. B?o luu m?i quy?n.
+          © 2026 FITUP. Bảo lưu mọi quyền.
           <span className="hidden h-1 w-1 rounded-full bg-zinc-700 sm:block" />
           <span className="text-zinc-500">Mã số thuế: 01234567</span>
         </p>
@@ -148,7 +144,7 @@ export default function Footer() {
                 key={idx}
                 href={social.href}
                 whileHover={{ y: -3, scale: 1.1 }}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 transition-colors hover:border-orange-500 hover:bg-orange-500 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 transition-colors hover:border-[#d68c45] hover:bg-[linear-gradient(135deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] hover:text-white"
               >
                 <Icon className="h-4 w-4" />
               </motion.a>
@@ -159,4 +155,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -19,19 +19,15 @@ export default function NewsDataSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="mb-16 flex flex-col items-start md:flex-row md:items-end md:justify-between"
         >
           <div className="max-w-2xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-sm font-medium text-orange-400 backdrop-blur-md">
-              <BookOpen className="h-4 w-4" />
-              <span>Góc Khoa Học & Dữ Liệu</span>
-            </div>
             <h2 className="text-3xl font-bold tracking-wider text-white md:text-5xl drop-shadow-md">
-              TẬP LUYỆN <span className="text-orange-500">THÔNG MINH HƠN</span>
+              TẬP LUYỆN <span className="text-[#d68c45]">THÔNG MINH HƠN</span>
             </h2>
           </div>
-          <button className="mt-6 flex items-center gap-2 text-sm font-semibold text-zinc-400 transition-colors hover:text-orange-500 md:mt-0">
+          <button className="mt-6 flex items-center gap-2 text-sm font-semibold text-zinc-400 transition-colors hover:text-[#d68c45] md:mt-0">
             Xem tất cả bài viết <ArrowUpRight className="h-4 w-4" />
           </button>
         </motion.div>
@@ -43,14 +39,14 @@ export default function NewsDataSection() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.35 }}
             className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800"
           >
             <Image
               src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
               alt="AI Posture"
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40"
+              className="object-cover transition-transform duration-150 group-hover:scale-110 opacity-60 group-hover:opacity-40"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
@@ -68,7 +64,7 @@ export default function NewsDataSection() {
               </p>
             </div>
             {/* Hover Arrow */}
-            <div className="absolute right-8 top-8 flex h-12 w-12 translate-x-4 -translate-y-4 items-center justify-center rounded-full bg-white text-black opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="absolute right-8 top-8 flex h-12 w-12 translate-x-4 -translate-y-4 items-center justify-center rounded-full bg-white text-black opacity-0 transition-all duration-150 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
               <ArrowUpRight className="h-5 w-5" />
             </div>
           </motion.div>
@@ -78,15 +74,15 @@ export default function NewsDataSection() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="group relative col-span-1 overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800 p-8 flex flex-col justify-between hover:border-orange-500/50 transition-colors"
+            transition={{ duration: 0.35, delay: 0.1 }}
+            className="group relative col-span-1 overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800 p-8 flex flex-col justify-between hover:border-[#d68c45]/50 transition-colors"
           >
             <div>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-lg bg-orange-500/20 px-3 py-1 text-xs font-bold text-orange-400">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-lg bg-[#d68c45]/20 px-3 py-1 text-xs font-bold text-[#d68c45]">
                 <TrendingUp className="h-4 w-4" /> Dữ Liệu
               </div>
               <h3 className="text-5xl font-black text-white mb-2">
-                85<span className="text-3xl text-orange-500">%</span>
+                85<span className="text-3xl text-[#d68c45]">%</span>
               </h3>
               <h4 className="text-lg font-bold text-zinc-100">
                 Tỷ lệ duy trì thói quen
@@ -104,14 +100,14 @@ export default function NewsDataSection() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.35, delay: 0.15 }}
             className="group relative col-span-1 overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800"
           >
             <Image
               src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
               alt="Nutrition"
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
+              className="object-cover transition-transform duration-150 group-hover:scale-110 opacity-60"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -129,27 +125,25 @@ export default function NewsDataSection() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.35, delay: 0.1 }}
             className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-[2rem] bg-zinc-900 border border-zinc-800 p-8 flex flex-col md:flex-row items-center gap-8 hover:bg-zinc-800/50 transition-colors"
           >
             <div className="flex-1">
               <h3 className="mb-4 text-2xl font-bold text-white">
-                Kết nối API với Smartwatch của bạn
+                Cá nhân hóa lộ trình tập luyện của bạn
               </h3>
               <p className="mb-6 text-sm text-zinc-400 max-w-md leading-relaxed">
-                Đồng bộ hóa nhịp tim, lượng calo tiêu thụ và chất lượng giấc ngủ
-                từ Apple Watch, Garmin để AI lên phác đồ tập luyện chuẩn xác tới
-                từng nhịp thở.
+                Cung cấp lộ trình tập luyện dựa trên sở thích cá nhân, thói quen và bữa ăn của bạn. Chúng tôi mong muốn mang lại cho bạn giá trị về sức khỏe cũng như tin thần.
               </p>
-              <button className="flex items-center gap-2 text-sm font-bold text-orange-500 hover:text-orange-400 transition-colors">
+              <button className="flex items-center gap-2 text-sm font-bold text-[#d68c45] hover:text-[#d68c45] transition-colors">
                 Khám phá tính năng <ArrowUpRight className="h-4 w-4" />
               </button>
             </div>
 
             {/* Mockup Smartwatch visual */}
-            <div className="relative h-40 w-40 md:h-48 md:w-48 shrink-0 rounded-full border-4 border-zinc-800 bg-black shadow-[0_0_30px_rgba(249,115,22,0.15)] flex items-center justify-center">
+            <div className="relative h-40 w-40 md:h-48 md:w-48 shrink-0 rounded-full border-4 border-zinc-800 bg-black shadow-[0_0_30px_rgba(214,140,69,0.15)] flex items-center justify-center">
               <div className="absolute inset-2 rounded-full border-2 border-dashed border-zinc-700 animate-[spin_10s_linear_infinite]" />
-              <div className="absolute inset-6 rounded-full border-4 border-t-orange-500 border-r-orange-500 border-b-zinc-800 border-l-zinc-800 rotate-45" />
+              <div className="absolute inset-6 rounded-full border-4 border-t-[#d68c45] border-r-[#d68c45] border-b-zinc-800 border-l-zinc-800 rotate-45" />
               <div className="text-center">
                 <span className="block text-2xl font-black text-white">
                   128
@@ -165,3 +159,5 @@ export default function NewsDataSection() {
     </section>
   );
 }
+
+

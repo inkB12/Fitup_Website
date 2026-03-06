@@ -14,23 +14,17 @@ export default function MissionSection() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.4 }}
             className="flex-1"
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-sm font-medium text-orange-400 backdrop-blur-md">
-              <Target className="h-4 w-4" />
-              <span>Sứ mệnh của FITUP</span>
-            </div>
+            
             <h2 className="mb-8 text-3xl font-bold tracking-wider text-white md:text-5xl">
-              SỨ MỆNH <span className="text-orange-500">CỦA CHÚNG TÔI</span>
+              SỨ MỆNH <span className="text-[#d68c45]">CỦA CHÚNG TÔI</span>
             </h2>
 
             <div className="space-y-6 text-base leading-relaxed text-zinc-400 md:text-lg">
               <p>
-                Ứng dụng của chúng tôi là sự kết hợp hoàn hảo giữa{" "}
-                <strong className="text-white">số liệu thống kê</strong>, các{" "}
-                <strong className="text-white">bài tập đa chức năng</strong> và{" "}
-                <strong className="text-white">thông tin khoa học</strong>.
+                Ứng dụng của chúng tôi là sự kết hợp hoàn hảo giữa số liệu thống kê, các bài tập đa chức năng và thông tin khoa học
               </p>
               <p>
                 Chúng tôi không ngừng nghiên cứu các chương trình tập luyện tiến
@@ -38,11 +32,10 @@ export default function MissionSection() {
                 thách hấp dẫn, biến việc đổ mồ hôi trở thành niềm vui mỗi ngày.
               </p>
               <div className="flex items-start gap-4 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6">
-                <Utensils className="h-8 w-8 shrink-0 text-orange-500" />
                 <p className="text-sm">
                   Kinh nghiệm từ các chuyên gia dinh dưỡng được ứng dụng triệt
                   để nhằm xây dựng kế hoạch ăn uống đậm chất Việt. Giúp bạn{" "}
-                  <strong className="text-orange-400">
+                  <strong className="text-[#d68c45]">
                     vừa đạt kết quả, vừa tận hưởng niềm vui ăn uống
                   </strong>{" "}
                   mà không phải kiêng khem khắc khổ.
@@ -56,7 +49,7 @@ export default function MissionSection() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="relative flex-1"
           >
             <div className="relative h-[500px] w-full overflow-hidden rounded-[2rem] border border-zinc-800 shadow-2xl">
@@ -70,26 +63,14 @@ export default function MissionSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
             </div>
 
-            {/* Floating Widget */}
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="absolute -bottom-8 -left-8 rounded-2xl border border-zinc-700/50 bg-black/80 p-6 backdrop-blur-xl shadow-2xl"
-            >
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500/20">
-                  <TrendingUp className="h-6 w-6 text-orange-500" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-white">Cam Kết</h4>
-                  <p className="text-sm text-zinc-400">100% Hiệu quả</p>
-                </div>
-              </div>
-            </motion.div>
+            
           </motion.div>
         </div>
       </div>
     </section>
   );
 }
+
+
 
 

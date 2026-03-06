@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
     <section className="relative w-full overflow-hidden py-24">
       {/* Background Gradient & Abstract Shapes */}
       <div className="absolute inset-0 z-0 bg-zinc-950" />
-      <div className="absolute top-0 left-1/2 z-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-orange-900/10 blur-[150px]" />
+      <div className="absolute top-0 left-1/2 z-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[#d68c45]/10 blur-[150px]" />
 
       <div className="container relative z-10 mx-auto max-w-7xl px-6">
         {/* Section Title */}
@@ -47,15 +47,12 @@ export default function TestimonialsSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="mb-16 flex flex-col items-center text-center"
         >
-          <div className="mb-4 flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-sm font-medium text-orange-400 backdrop-blur-md">
-            <Star className="h-4 w-4 fill-orange-400 text-orange-400" />
-            <span>Đánh Giá Từ Cộng Đồng</span>
-          </div>
+          
           <h2 className="mb-4 text-3xl font-bold tracking-wider text-white md:text-5xl drop-shadow-md">
-            HƠN CẢ SỰ <span className="text-orange-500">MONG ĐỢI</span>
+            HƠN CẢ SỰ <span className="text-[#d68c45]">MONG ĐỢI</span>
           </h2>
           <p className="max-w-2xl text-sm text-zinc-400 md:text-base leading-relaxed">
             Hàng ngàn người dùng đã thay đổi vóc dáng và thói quen sống nhờ
@@ -71,17 +68,17 @@ export default function TestimonialsSection() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.35, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-[2rem] border border-zinc-800/60 bg-zinc-900/40 p-8 backdrop-blur-sm transition-all hover:border-orange-500/40 hover:bg-zinc-900/80 hover:shadow-2xl hover:shadow-orange-500/10"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-[2rem] border border-zinc-800/60 bg-zinc-900/40 p-8 backdrop-blur-sm transition-all hover:border-[#d68c45]/40 hover:bg-zinc-900/80 hover:shadow-2xl hover:shadow-[#d68c45]/10"
             >
               {/* Giant Background Quote Icon */}
-              <Quote className="absolute -right-6 -top-6 z-0 h-32 w-32 rotate-12 text-zinc-800/30 transition-transform duration-500 group-hover:rotate-0 group-hover:text-orange-500/10" />
+              <Quote className="absolute -right-6 -top-6 z-0 h-32 w-32 rotate-12 text-zinc-800/30 transition-transform duration-200 group-hover:rotate-0 group-hover:text-[#d68c45]/10" />
 
               <div className="relative z-10">
                 {/* Header: Avatar + Info */}
                 <div className="mb-6 flex items-center gap-4">
-                  <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-zinc-700 transition-colors group-hover:border-orange-500">
+                  <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-zinc-700 transition-colors group-hover:border-[#d68c45]">
                     <Image
                       src={review.avatar}
                       alt={review.name}
@@ -97,7 +94,7 @@ export default function TestimonialsSection() {
                       <CheckCircle className="h-4 w-4 text-blue-500" />{" "}
                       {/* Verified Badge */}
                     </div>
-                    <p className="text-xs font-medium text-orange-400">
+                    <p className="text-xs font-medium text-[#d68c45]">
                       {review.role}
                     </p>
                   </div>
@@ -108,7 +105,7 @@ export default function TestimonialsSection() {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className="h-4 w-4 fill-orange-500 text-orange-500"
+                      className="h-4 w-4 fill-[#d68c45] text-[#d68c45]"
                     />
                   ))}
                 </div>
@@ -125,7 +122,7 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Bottom Glow Line on Hover */}
-              <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-orange-600 to-orange-400 transition-all duration-500 group-hover:w-full" />
+              <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#d68c45] to-[#d68c45] transition-all duration-200 group-hover:w-full" />
             </motion.div>
           ))}
         </div>
@@ -133,3 +130,5 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+
+

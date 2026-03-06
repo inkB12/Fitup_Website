@@ -1,8 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Flame, Utensils, Award, ShieldCheck } from "lucide-react";
 
 // Component Đếm Số Động (Animated Counter)
 function AnimatedCounter({
@@ -42,7 +41,6 @@ function AnimatedCounter({
 export default function StatsSection() {
   const stats = [
     {
-      icon: <Flame className="h-8 w-8 text-orange-500" fill="currentColor" />,
       number: 100000,
       suffix: "+",
       title: "Lộ Trình Hoàn Thành",
@@ -51,24 +49,20 @@ export default function StatsSection() {
       delay: 0.1,
     },
     {
-      icon: (
-        <Utensils className="h-8 w-8 text-orange-500" fill="currentColor" />
-      ),
       number: 2500,
       suffix: "+",
       title: "Thực Đơn Thuần Việt",
       description:
         "Kho dữ liệu khổng lồ với các món ăn quen thuộc, giúp bạn kiểm soát calo mà không cần nhịn đói.",
-      delay: 0.3,
+      delay: 0.15,
     },
     {
-      icon: <Award className="h-8 w-8 text-orange-500" fill="currentColor" />,
       number: 150,
       suffix: "+",
       title: "Chuyên Gia & PT",
       description:
         "Đội ngũ huấn luyện viên giàu kinh nghiệm, đạt chứng chỉ quốc tế luôn sẵn sàng hỗ trợ bạn 24/7.",
-      delay: 0.5,
+      delay: 0.15,
     },
   ];
 
@@ -95,12 +89,9 @@ export default function StatsSection() {
           viewport={{ once: true }}
           className="mb-16 flex flex-col items-center text-center"
         >
-          <div className="mb-4 flex items-center gap-2 rounded-full border border-orange-500/30 bg-black/50 px-4 py-1.5 text-sm font-medium text-orange-400 backdrop-blur-md">
-            <ShieldCheck className="h-4 w-4" />
-            <span>Minh Chứng Thực Tế</span>
-          </div>
+          
           <h2 className="mb-4 text-3xl font-bold tracking-wider text-white md:text-4xl drop-shadow-md">
-            NHỮNG CON SỐ <span className="text-orange-500">BIẾT NÓI</span>
+            NHỮNG CON SỐ <span className="text-[#d68c45]">BIẾT NÓI</span>
           </h2>
           <p className="max-w-2xl text-sm text-zinc-300 md:text-base">
             Sự nỗ lực và thành quả của cộng đồng người dùng chính là thước đo
@@ -117,22 +108,18 @@ export default function StatsSection() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: stat.delay }}
+              transition={{ duration: 0.35, delay: stat.delay }}
               whileHover={{ y: -10 }}
-              className="group relative flex flex-col items-center overflow-hidden rounded-[2rem] border border-zinc-700/50 bg-black/40 p-10 text-center backdrop-blur-md transition-all hover:border-orange-500/50 hover:bg-black/60 hover:shadow-2xl hover:shadow-orange-500/20"
+              className="group relative flex flex-col items-center overflow-hidden rounded-[2rem] border border-zinc-700/50 bg-black/40 p-10 text-center backdrop-blur-md transition-all hover:border-[#d68c45]/50 hover:bg-black/60 hover:shadow-2xl hover:shadow-[#d68c45]/20"
             >
               {/* Shine effect on hover */}
-              <div className="absolute -left-full top-0 z-0 h-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 transition-all duration-700 group-hover:left-[200%] group-hover:opacity-100" />
-
-              <div className="relative z-10 mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-zinc-900/80 border border-zinc-800 shadow-inner group-hover:border-orange-500/50 transition-colors">
-                {stat.icon}
-              </div>
+              <div className="absolute -left-full top-0 z-0 h-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 transition-all duration-150 group-hover:left-[200%] group-hover:opacity-100" />
 
               <div className="relative z-10 mb-2 flex items-baseline gap-1">
                 <span className="text-5xl font-black text-white md:text-6xl drop-shadow-lg">
                   <AnimatedCounter to={stat.number} duration={2.5} />
                 </span>
-                <span className="text-3xl font-bold text-orange-500">
+                <span className="text-3xl font-bold text-[#d68c45]">
                   {stat.suffix}
                 </span>
               </div>
@@ -150,3 +137,5 @@ export default function StatsSection() {
     </section>
   );
 }
+
+

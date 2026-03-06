@@ -21,23 +21,23 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Trang chủ", href: "/" },
-    { name: "Về chúng tôi", href: "/about" },
-    { name: "Lộ trình tập", href: "/workout-plan" },
-    { name: "Trở thành PT", href: "/become-pt" },
-    { name: "Bài viết", href: "/blogs" },
+    { name: "Home", href: "/" },
+    { name: "About us", href: "/about" },
+    { name: "Workout Plan", href: "/workout-plan" },
+    { name: "Become PT", href: "/become-pt" },
+    { name: "Blogs", href: "/blogs" },
   ];
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-500 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-200 ${
         isScrolled
-          ? "border-b border-zinc-800 bg-black/90 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] py-2"
-          : "border-b border-zinc-800/50 bg-black/40 backdrop-blur-md py-4"
+          ? "border-b border-zinc-800 bg-[#121212] backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] py-2"
+          : "border-b border-zinc-800/50 bg-[#121212] backdrop-blur-md py-4"
       }`}
     >
       {/* Đường viền ánh sáng chìm ở đáy Header */}
-      <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-orange-500/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-[#d68c45]/20 to-transparent" />
 
       <div className="container mx-auto flex h-12 max-w-7xl items-center justify-between px-6">
         {/* Navigation - Desktop */}
@@ -63,7 +63,7 @@ export default function Header() {
                 )}
                 {/* Text (Z-10 so it's above the pill) */}
                 <span
-                  className={`relative z-10 ${isActive ? "text-orange-500 drop-shadow-sm" : "text-zinc-400 hover:text-white"}`}
+                  className={`relative z-10 ${isActive ? "text-[#d68c45] drop-shadow-sm" : "text-zinc-400 hover:text-white"}`}
                 >
                   {link.name}
                 </span>
@@ -76,7 +76,7 @@ export default function Header() {
         <div className="flex md:hidden items-center">
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="text-zinc-400 hover:text-orange-500 transition-colors p-2"
+            className="text-zinc-400 hover:text-[#d68c45] transition-colors p-2"
           >
             {isMobileOpen ? (
               <X className="h-6 w-6" />
@@ -89,14 +89,14 @@ export default function Header() {
         {/* Search Bar */}
         <div className="group relative hidden md:block w-72">
           {/* Glow effect on focus */}
-          <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 opacity-0 blur-md transition-opacity duration-300 group-focus-within:opacity-40" />
+          <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-[#d68c45] to-red-500 opacity-0 blur-md transition-opacity duration-150 group-focus-within:opacity-40" />
 
           <input
             type="text"
-            placeholder="Tìm kiếm..."
-            className="relative h-10 w-full rounded-full border border-zinc-700 bg-zinc-900/60 pl-5 pr-12 text-sm text-white placeholder-zinc-500 backdrop-blur-sm transition-all focus:border-orange-500 focus:bg-zinc-950 focus:outline-none"
+            placeholder="Search..."
+            className="relative h-10 w-full rounded-full border border-zinc-700 bg-zinc-900/60 pl-5 pr-12 text-sm text-white placeholder-zinc-500 backdrop-blur-sm transition-all focus:border-[#d68c45] focus:bg-zinc-950 focus:outline-none"
           />
-          <Search className="absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400 transition-colors group-focus-within:text-orange-500" />
+          <Search className="absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400 transition-colors group-focus-within:text-[#d68c45]" />
         </div>
       </div>
 
@@ -107,7 +107,7 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-zinc-800 bg-black/95 backdrop-blur-2xl overflow-hidden"
+            className="md:hidden border-t border-zinc-800 bg-[#121212] backdrop-blur-2xl overflow-hidden"
           >
             <nav className="flex flex-col px-6 py-6 gap-6">
               {navLinks.map((link) => {
@@ -121,7 +121,7 @@ export default function Header() {
                     onClick={() => setIsMobileOpen(false)}
                     className={`text-lg font-medium transition-colors ${
                       isActive
-                        ? "text-orange-500"
+                        ? "text-[#d68c45]"
                         : "text-zinc-400 hover:text-white"
                     }`}
                   >
@@ -134,8 +134,8 @@ export default function Header() {
               <div className="relative w-full mt-4">
                 <input
                   type="text"
-                  placeholder="Tìm kiếm..."
-                  className="h-12 w-full rounded-full border border-zinc-700 bg-zinc-900/50 pl-5 pr-12 text-base text-white focus:border-orange-500 focus:outline-none"
+                  placeholder="Search..."
+                  className="h-12 w-full rounded-full border border-zinc-700 bg-zinc-900/50 pl-5 pr-12 text-base text-white focus:border-[#d68c45] focus:outline-none"
                 />
                 <Search className="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-zinc-400" />
               </div>
@@ -146,4 +146,6 @@ export default function Header() {
     </header>
   );
 }
+
+
 

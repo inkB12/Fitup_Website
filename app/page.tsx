@@ -11,7 +11,6 @@ import WorkoutPackagesSection from "@/features/home/components/WorkoutPackagesSe
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      {/* Nơi chứa các component của Homepage sẽ được nhúng vào đây */}
       <HeroSection />
       <FeaturesSection />
       <CoachesSection />
@@ -21,13 +20,6 @@ export default function Home() {
       <NewsDataSection />
       <TestimonialsSection />
       <CtaSection />
-
-      {/* Tạm thời hiển thị text để bạn biết trang đã chạy thành công */}
-      <div className="flex min-h-[80vh] items-center justify-center">
-        <h1 className="text-3xl font-bold tracking-wider text-orange-500">
-          Trang chủ FITUP đã sẵn sàng
-        </h1>
-      </div>
     </div>
   );
 }

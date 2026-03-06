@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Hand } from "lucide-react";
 
 export default function GreetingSection() {
   return (
@@ -20,19 +19,10 @@ export default function GreetingSection() {
       </div>
 
       <div className="container relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 0.7, type: "spring" }}
-          className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/20 text-orange-500 backdrop-blur-md border border-orange-500/30"
-        >
-          <Hand className="h-8 w-8" />
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
           className="mb-6 text-5xl font-black tracking-widest text-white md:text-7xl drop-shadow-2xl"
         >
           XIN CHÀO!
@@ -41,10 +31,10 @@ export default function GreetingSection() {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
           className="max-w-3xl text-lg leading-relaxed text-zinc-400 md:text-xl"
         >
-          Chúng tôi là <span className="font-bold text-orange-500">FITUP</span>.
+          Chúng tôi là <span className="font-bold text-[#d68c45]">FITUP</span>.
           Hơn cả một ứng dụng công nghệ, chúng tôi là người bạn đồng hành 24/7
           trên hành trình lột xác, mang trải nghiệm kết nối Personal Trainer
           liền mạch đến mọi nơi bạn đến.
@@ -53,4 +43,6 @@ export default function GreetingSection() {
     </section>
   );
 }
+
+
 

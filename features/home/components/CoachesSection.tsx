@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -46,22 +46,22 @@ export default function CoachesSection() {
       {/* Floating Background Icons */}
       <motion.div
         animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         className="absolute left-10 top-32 z-0 hidden opacity-20 md:block"
       >
-        <Dumbbell className="h-24 w-24 text-orange-500" />
+        <Dumbbell className="h-24 w-24 text-[#d68c45]" />
       </motion.div>
       <motion.div
         animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
         transition={{
-          duration: 6,
+          duration: 3.5,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 1,
         }}
         className="absolute right-10 bottom-32 z-0 hidden opacity-20 md:block"
       >
-        <Activity className="h-32 w-32 text-orange-500" />
+        <Activity className="h-32 w-32 text-[#d68c45]" />
       </motion.div>
 
       <div className="container mx-auto flex max-w-7xl flex-col items-center px-6">
@@ -70,16 +70,13 @@ export default function CoachesSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="mb-16 flex flex-col items-center text-center relative z-10"
         >
-          <div className="mb-4 flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-sm font-medium text-orange-500 backdrop-blur-md">
-            <Activity className="h-4 w-4" />
-            <span>Đồng Hành Cùng Chuyên Gia</span>
-          </div>
+          
           <h2 className="mb-6 text-4xl font-black text-white md:text-5xl lg:text-6xl drop-shadow-md">
             24/7{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d68c45] to-red-500">
               AI-Coach
             </span>{" "}
             & PT Connection
@@ -94,7 +91,7 @@ export default function CoachesSection() {
         {/* Coaches Cards Showcase */}
         <div className="relative mt-12 flex h-[450px] w-full items-center justify-center md:h-[600px]">
           {/* Intense Glow Background */}
-          <div className="absolute top-1/2 left-1/2 -z-10 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/40 blur-[120px] md:h-[500px] md:w-[700px] md:bg-orange-600/30" />
+          <div className="absolute top-1/2 left-1/2 -z-10 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/40 blur-[120px] md:h-[500px] md:w-[700px] md:bg-[#d68c45]/30" />
 
           {COACHES.map((coach, index) => {
             // Xác định class CSS dựa trên vị trí (Trái - Giữa - Phải)
@@ -103,7 +100,7 @@ export default function CoachesSection() {
             const isRight = coach.position === "right";
 
             const baseCardClasses =
-              "absolute overflow-hidden rounded-[2rem] transition-transform duration-300 ease-out";
+              "absolute overflow-hidden rounded-[2rem] transition-transform duration-150 ease-out";
 
             // Xử lý vị trí tĩnh (sẽ kết hợp hover animation ở Framer Motion)
             const positionClasses = isCenter
@@ -118,7 +115,7 @@ export default function CoachesSection() {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.35, delay: index * 0.1 }}
                 whileHover={
                   isCenter
                     ? {
@@ -146,7 +143,7 @@ export default function CoachesSection() {
                     src={coach.image}
                     alt={coach.name}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover transition-transform duration-150 group-hover:scale-110"
                   />
 
                   {/* Gradient Overlay để làm chìm ảnh, nổi chữ */}
@@ -155,7 +152,7 @@ export default function CoachesSection() {
                   {/* Card Content */}
                   <div className="absolute bottom-0 left-0 w-full p-6 text-left">
                     <div className="mb-2 flex items-center justify-between">
-                      <span className="rounded-full bg-orange-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-orange-400 backdrop-blur-md">
+                      <span className="rounded-full bg-[#d68c45]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#d68c45] backdrop-blur-md">
                         {isCenter ? "AI BOT" : "EXPERT PT"}
                       </span>
                       <div className="flex items-center gap-1 text-yellow-400">
@@ -175,9 +172,9 @@ export default function CoachesSection() {
 
                     {/* Hover Action Button */}
                     <div
-                      className={`overflow-hidden transition-all duration-300 ${isCenter ? "max-h-12 opacity-100" : "max-h-0 opacity-0 group-hover:max-h-12 group-hover:opacity-100"}`}
+                      className={`overflow-hidden transition-all duration-150 ${isCenter ? "max-h-12 opacity-100" : "max-h-0 opacity-0 group-hover:max-h-12 group-hover:opacity-100"}`}
                     >
-                      <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-orange-500 py-3 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-orange-600">
+                      <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] py-3 text-sm font-semibold text-white shadow-lg transition-all duration-150 hover:brightness-110">
                         {isCenter ? (
                           <MessageCircle className="h-4 w-4" />
                         ) : (
@@ -196,3 +193,5 @@ export default function CoachesSection() {
     </section>
   );
 }
+
+

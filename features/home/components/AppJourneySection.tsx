@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { UserPlus, Cpu, Dumbbell, Trophy } from "lucide-react";
@@ -6,28 +6,28 @@ import { UserPlus, Cpu, Dumbbell, Trophy } from "lucide-react";
 const STEPS = [
   {
     id: 1,
-    icon: <UserPlus className="h-8 w-8 text-orange-500" />,
+    icon: <UserPlus className="h-8 w-8 text-[#d68c45]" />,
     title: "1. Khởi Tạo Hồ Sơ",
     description:
       "Nhập chỉ số cơ thể, thói quen ăn uống và mục tiêu mong muốn (giảm mỡ, tăng cơ...).",
   },
   {
     id: 2,
-    icon: <Cpu className="h-8 w-8 text-orange-500" />,
+    icon: <Cpu className="h-8 w-8 text-[#d68c45]" />,
     title: "2. Phân Tích Bằng AI",
     description:
       "Hệ thống AI xử lý dữ liệu để tạo ra lộ trình tập luyện và thực đơn cá nhân hóa 100%.",
   },
   {
     id: 3,
-    icon: <Dumbbell className="h-8 w-8 text-orange-500" />,
+    icon: <Dumbbell className="h-8 w-8 text-[#d68c45]" />,
     title: "3. Bắt Đầu Tập Luyện",
     description:
       "Thực hành theo video hướng dẫn 3D, có AI Voice nhắc nhở và đếm nhịp trực tiếp.",
   },
   {
     id: 4,
-    icon: <Trophy className="h-8 w-8 text-orange-500" />,
+    icon: <Trophy className="h-8 w-8 text-[#d68c45]" />,
     title: "4. Lột Xác Toàn Diện",
     description:
       "Theo dõi biểu đồ tiến độ hàng tuần. AI tự động tinh chỉnh bài tập để bạn đạt kết quả nhanh nhất.",
@@ -43,15 +43,12 @@ export default function AppJourneySection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="mb-20 flex flex-col items-center text-center"
         >
-          <div className="mb-4 flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-sm font-medium text-orange-400 backdrop-blur-md">
-            <Cpu className="h-4 w-4" />
-            <span>Cách Thức Hoạt Động</span>
-          </div>
+          
           <h2 className="mb-4 text-3xl font-bold tracking-wider text-white md:text-5xl drop-shadow-md">
-            HÀNH TRÌNH <span className="text-orange-500">LỘT XÁC</span> CỦA BẠN
+            HÀNH TRÌNH <span className="text-[#d68c45]">LỘT XÁC</span> CỦA BẠN
           </h2>
           <p className="max-w-2xl text-sm text-zinc-400 md:text-base leading-relaxed">
             Chỉ với 4 bước đơn giản, FITUP sẽ biến chiếc điện thoại của bạn
@@ -67,8 +64,8 @@ export default function AppJourneySection() {
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="h-full bg-gradient-to-r from-orange-600 via-orange-400 to-red-500 shadow-[0_0_15px_rgba(249,115,22,0.5)]"
+              transition={{ duration: 0.45, ease: "easeInOut" }}
+              className="h-full bg-gradient-to-r from-[#d68c45] via-[#d68c45] to-red-500 shadow-[0_0_15px_rgba(214,140,69,0.5)]"
             />
           </div>
 
@@ -78,8 +75,8 @@ export default function AppJourneySection() {
               initial={{ height: 0 }}
               whileInView={{ height: "100%" }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              className="w-full bg-gradient-to-b from-orange-600 via-orange-400 to-red-500 shadow-[0_0_15px_rgba(249,115,22,0.5)]"
+              transition={{ duration: 0.45, ease: "easeInOut" }}
+              className="w-full bg-gradient-to-b from-[#d68c45] via-[#d68c45] to-red-500 shadow-[0_0_15px_rgba(214,140,69,0.5)]"
             />
           </div>
 
@@ -90,18 +87,18 @@ export default function AppJourneySection() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: index * 0.3 }}
+                transition={{ duration: 0.35, delay: index * 0.15 }}
                 className="group relative flex flex-col items-start md:items-center md:text-center pl-16 md:pl-0"
               >
                 {/* Step Icon Container */}
-                <div className="absolute left-0 top-0 md:relative md:mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-zinc-900 border-2 border-zinc-700 shadow-xl transition-all duration-300 group-hover:border-orange-500 group-hover:scale-110 group-hover:shadow-orange-500/30 z-10">
-                  <div className="absolute -inset-2 rounded-full bg-orange-500/20 blur-md opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute left-0 top-0 md:relative md:mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-zinc-900 border-2 border-zinc-700 shadow-xl transition-all duration-150 group-hover:border-[#d68c45] group-hover:scale-110 group-hover:shadow-[#d68c45]/30 z-10">
+                  <div className="absolute -inset-2 rounded-full bg-[#d68c45]/20 blur-md opacity-0 transition-opacity duration-150 group-hover:opacity-100" />
                   {step.icon}
                 </div>
 
                 {/* Step Content */}
-                <div className="mt-1 md:mt-0 rounded-2xl border border-transparent bg-zinc-900/40 p-6 transition-colors duration-300 hover:border-zinc-800 hover:bg-zinc-800/50">
-                  <h3 className="mb-3 text-lg font-bold text-white transition-colors group-hover:text-orange-400">
+                <div className="mt-1 md:mt-0 rounded-2xl border border-transparent bg-zinc-900/40 p-6 transition-colors duration-150 hover:border-zinc-800 hover:bg-zinc-800/50">
+                  <h3 className="mb-3 text-lg font-bold text-white transition-colors group-hover:text-[#d68c45]">
                     {step.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-zinc-400">
@@ -116,3 +113,5 @@ export default function AppJourneySection() {
     </section>
   );
 }
+
+
