@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -22,7 +22,7 @@ export default function MissionSection() {
               <span>Sứ mệnh của FITUP</span>
             </div>
             <h2 className="mb-8 text-3xl font-bold tracking-wider text-white md:text-5xl">
-              OUR <span className="text-orange-500">MISSION</span>
+              SỨ MỆNH <span className="text-orange-500">CỦA CHÚNG TÔI</span>
             </h2>
 
             <div className="space-y-6 text-base leading-relaxed text-zinc-400 md:text-lg">
@@ -91,3 +91,5 @@ export default function MissionSection() {
     </section>
   );
 }
+
+

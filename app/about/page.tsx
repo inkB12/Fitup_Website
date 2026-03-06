@@ -1,9 +1,9 @@
-import GreetingSection from "@/features/about/components/GreetingSection";
+﻿import GreetingSection from "@/features/about/components/GreetingSection";
 import MissionSection from "@/features/about/components/MissionSection";
 import CoreValuesSection from "@/features/about/components/CoreValuesSection";
 
 export const metadata = {
-  title: "About Us | FITUP",
+  title: "Về chúng tôi | FITUP",
   description:
     "Tìm hiểu thêm về sứ mệnh và tầm nhìn của ứng dụng fitness FITUP.",
 };
@@ -17,3 +17,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

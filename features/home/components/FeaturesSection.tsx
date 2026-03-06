@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -43,7 +43,7 @@ export default function FeaturesSection() {
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-orange-500/10">
                 <Image
                   src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
-                  alt="AI Workout Plan"
+                  alt="Lộ trình tập luyện AI"
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
                 />
@@ -73,7 +73,7 @@ export default function FeaturesSection() {
                   </div>
                   <div className="flex items-center gap-2 text-sm text-zinc-500 line-through">
                     <CheckCircle2 className="h-4 w-4 text-zinc-600" />
-                    <span>Core Workout</span>
+                    <span>Bài tập cốt lõi</span>
                   </div>
                 </div>
               </motion.div>
@@ -94,7 +94,7 @@ export default function FeaturesSection() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
                   Personalized
                 </span>
-                <br /> Workout Plan
+                <br /> Lộ trình tập
               </h3>
               <p className="text-base leading-relaxed text-zinc-400">
                 Hệ thống AI phân tích thể trạng và mục tiêu của bạn để tạo ra lộ
@@ -180,12 +180,12 @@ export default function FeaturesSection() {
                   <div className="flex -space-x-2">
                     <img
                       src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
-                      alt="User"
+                      alt="Người dùng"
                       className="h-8 w-8 rounded-full border-2 border-black"
                     />
                     <img
                       src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
-                      alt="User"
+                      alt="Người dùng"
                       className="h-8 w-8 rounded-full border-2 border-black"
                     />
                     <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-black bg-zinc-800 text-[10px] text-white">
@@ -193,7 +193,7 @@ export default function FeaturesSection() {
                     </div>
                   </div>
                   <span className="text-xs text-zinc-400 flex items-center gap-1">
-                    <Users className="h-3 w-3" /> Friends
+                    <Users className="h-3 w-3" /> Bạn bè
                   </span>
                 </div>
               </motion.div>
@@ -204,3 +204,4 @@ export default function FeaturesSection() {
     </section>
   );
 }
+

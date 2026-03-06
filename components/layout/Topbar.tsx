@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -30,10 +30,10 @@ export default function Topbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-bold text-white transition-colors group-hover:text-orange-400">
-                FITUP Corporate
+                Văn phòng FITUP
               </span>
               <span className="text-xs text-zinc-500">
-                Ho Chi Minh City, Vietnam
+                TP. Hồ Chí Minh, Việt Nam
               </span>
             </div>
           </motion.div>
@@ -48,7 +48,7 @@ export default function Topbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-bold text-white transition-colors group-hover:text-orange-400">
-                Workspace
+                Liên hệ
               </span>
               <span className="text-xs text-zinc-500">hello@fitup.com</span>
             </div>
@@ -74,3 +74,4 @@ export default function Topbar() {
     </div>
   );
 }
+

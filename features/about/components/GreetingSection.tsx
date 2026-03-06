@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -11,7 +11,7 @@ export default function GreetingSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
-          alt="FITUP Team"
+          alt="Đội ngũ FITUP"
           fill
           className="object-cover opacity-40"
           priority
@@ -53,3 +53,4 @@ export default function GreetingSection() {
     </section>
   );
 }
+

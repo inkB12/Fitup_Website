@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Star, Apple, Play, Download, Smartphone } from "lucide-react";
@@ -91,30 +91,30 @@ export default function CtaSection() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6"
         >
-          {/* App Store Button */}
+          {/* Kho ứng dụng Button */}
           <button className="group relative flex h-14 w-48 items-center justify-center gap-3 rounded-xl border border-zinc-700 bg-black overflow-hidden transition-all hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
             <Apple className="relative z-10 h-7 w-7 text-white" />
             <div className="relative z-10 flex flex-col items-start text-left">
               <span className="text-[10px] leading-none text-zinc-400">
-                Download on the
+                Tải xuống trên
               </span>
               <span className="text-base font-semibold leading-none text-white">
-                App Store
+                Kho ứng dụng
               </span>
             </div>
           </button>
 
-          {/* Google Play Button */}
+          {/* CH Play Button */}
           <button className="group relative flex h-14 w-48 items-center justify-center gap-3 rounded-xl border border-zinc-700 bg-black overflow-hidden transition-all hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/20">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
             <Play className="relative z-10 h-6 w-6 text-white fill-white" />
             <div className="relative z-10 flex flex-col items-start text-left">
               <span className="text-[10px] leading-none text-zinc-400">
-                GET IT ON
+                TẢI TRÊN
               </span>
               <span className="text-base font-semibold leading-none text-white">
-                Google Play
+                CH Play
               </span>
             </div>
           </button>
@@ -123,3 +123,4 @@ export default function CtaSection() {
     </section>
   );
 }
+

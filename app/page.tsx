@@ -1,4 +1,4 @@
-import AppJourneySection from "@/features/home/components/AppJourneySection";
+﻿import AppJourneySection from "@/features/home/components/AppJourneySection";
 import CoachesSection from "@/features/home/components/CoachesSection";
 import CtaSection from "@/features/home/components/CtaSection";
 import FeaturesSection from "@/features/home/components/FeaturesSection";
@@ -25,9 +25,11 @@ export default function Home() {
       {/* Tạm thời hiển thị text để bạn biết trang đã chạy thành công */}
       <div className="flex min-h-[80vh] items-center justify-center">
         <h1 className="text-3xl font-bold tracking-wider text-orange-500">
-          FITUP Homepage is ready
+          Trang chủ FITUP đã sẵn sàng
         </h1>
       </div>
     </div>
   );
 }
+
+

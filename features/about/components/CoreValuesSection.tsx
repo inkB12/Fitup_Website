@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Brain, Heart, Zap, Users, ArrowRight } from "lucide-react";
@@ -6,25 +6,25 @@ import { Brain, Heart, Zap, Users, ArrowRight } from "lucide-react";
 const VALUES = [
   {
     icon: <Brain className="h-8 w-8 text-blue-400" />,
-    title: "AI-Driven Adaptability",
+    title: "Thích ứng nhờ AI",
     description:
       "Công nghệ AI tự động phân tích và điều chỉnh cường độ tập luyện thích ứng hoàn toàn với thể trạng thực tế của cơ thể bạn.",
   },
   {
     icon: <Heart className="h-8 w-8 text-red-400" />,
-    title: "Science-Backed Nutrition",
+    title: "Dinh dưỡng chuẩn khoa học",
     description:
       "Chế độ dinh dưỡng không dựa trên suy đoán, mà được đo lường chính xác từ dữ liệu khoa học và văn hóa ẩm thực Việt.",
   },
   {
     icon: <Zap className="h-8 w-8 text-yellow-400" />,
-    title: "Instant Connection",
+    title: "Kết nối tức thì",
     description:
       "Xóa bỏ rào cản thời gian. Kết nối nhanh chóng với các chuyên gia PT hàng đầu chỉ qua vài cú chạm ngay trên ứng dụng.",
   },
   {
     icon: <Users className="h-8 w-8 text-green-400" />,
-    title: "Community Growth",
+    title: "Cộng đồng cùng phát triển",
     description:
       "Sức mạnh của cộng đồng. Chúng tôi xây dựng một môi trường tích cực để mọi người cùng chia sẻ thành quả và tạo động lực.",
   },
@@ -93,3 +93,4 @@ export default function CoreValuesSection() {
     </section>
   );
 }
+

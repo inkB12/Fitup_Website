@@ -1,27 +1,23 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+﻿import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-// Đã mở comment để import
 import Topbar from "@/components/layout/Topbar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "FITUP - Transform Your Body, Transform Your Life",
+  title: "FITUP - Lột xác vóc dáng, nâng tầm cuộc sống",
   description:
-    "Ứng dụng fitness thông minh với AI Coach và Personal Trainer 24/7.",
+    "Ứng dụng fitness thông minh với huấn luyện viên AI và PT cá nhân 24/7.",
 };
 
 export default function RootLayout({
@@ -32,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="vi" className="dark" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col font-sans antialiased`}
+        className={`${montserrat.variable} flex min-h-screen flex-col font-sans antialiased`}
       >
         <Topbar />
         <Header />

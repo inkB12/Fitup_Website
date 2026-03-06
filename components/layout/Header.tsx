@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -21,11 +21,11 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About us", href: "/about" },
-    { name: "Workout Plan", href: "/workout-plan" },
-    { name: "Become PT", href: "/become-pt" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Trang chủ", href: "/" },
+    { name: "Về chúng tôi", href: "/about" },
+    { name: "Lộ trình tập", href: "/workout-plan" },
+    { name: "Trở thành PT", href: "/become-pt" },
+    { name: "Bài viết", href: "/blogs" },
   ];
 
   return (
@@ -146,3 +146,4 @@ export default function Header() {
     </header>
   );
 }
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -130,7 +130,7 @@ export default function Footer() {
       {/* Bottom Bar: Copyright & Socials */}
       <div className="container relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-zinc-800/80 px-6 pt-8 text-xs sm:flex-row md:text-sm">
         <p className="flex items-center gap-2">
-          © 2026 FITUP. All rights reserved.
+          © 2026 FITUP. B?o luu m?i quy?n.
           <span className="hidden h-1 w-1 rounded-full bg-zinc-700 sm:block" />
           <span className="text-zinc-500">Mã số thuế: 01234567</span>
         </p>
@@ -159,3 +159,4 @@ export default function Footer() {
     </footer>
   );
 }
+
