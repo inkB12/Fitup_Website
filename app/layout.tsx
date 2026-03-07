@@ -14,9 +14,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "FITUP - Lột xác vóc dáng, nâng tầm cuộc sống",
+  title: "FITUP - Transform Your Body, Elevate Your Life",
   description:
-    "Ứng dụng fitness thông minh với huấn luyện viên AI và PT cá nhân 24/7.",
+    "Smart fitness platform with AI coaching and personal trainers available 24/7.",
 };
 
 export default function RootLayout({
