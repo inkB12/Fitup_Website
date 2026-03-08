@@ -53,7 +53,6 @@ export default function Footer() {
             <ul className="flex flex-col gap-4 text-sm">
               {[
                 "Về Chúng Tôi",
-                "Trở Thành PT",
                 "Blog Kiến Thức",
               ].map((item, i) => (
                 <li key={i}>
@@ -75,16 +74,16 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-4 text-sm">
               {[
-                "Bảo mật thông tin",
-                "Điều khoản dịch vụ",
-                "Chính sách hoàn tiền"
-              ].map((item, i) => (
-                <li key={i}>
+                { label: "Bảo mật thông tin", href: "/privacy-policy" },
+                { label: "Điều khoản dịch vụ", href: "/tos" },
+                { label: "Chính sách hoàn tiền", href: "/refund-policy" },
+              ].map((item) => (
+                <li key={item.label}>
                   <Link
-                    href="#"
+                    href={item.href}
                     className="transition-colors hover:text-[#d68c45]"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -121,7 +120,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-4">
           {[
-            { icon: Facebook, href: "#" },
+            { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61559948289103" },
             { icon: Music2, href: "#" }, // Tiktok
             { icon: Instagram, href: "#" },
             { icon: Youtube, href: "#" },
