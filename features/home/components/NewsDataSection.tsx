@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Activity, ArrowUpRight, Brain, TrendingUp } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export default function NewsDataSection() {
   const router = useRouter();
@@ -165,16 +165,6 @@ export default function NewsDataSection() {
               </span>
             </div>
 
-            <div className="relative flex h-40 w-40 shrink-0 items-center justify-center rounded-full border-4 border-zinc-800 bg-black shadow-[0_0_30px_rgba(214,140,69,0.15)] md:h-48 md:w-48">
-              <div className="absolute inset-2 animate-[spin_10s_linear_infinite] rounded-full border-2 border-dashed border-zinc-700" />
-              <div className="absolute inset-6 rotate-45 rounded-full border-4 border-b-zinc-800 border-l-zinc-800 border-r-[#d68c45] border-t-[#d68c45]" />
-              <div className="text-center">
-                <span className="block text-2xl font-black text-white">128</span>
-                <span className="block text-[10px] font-bold uppercase tracking-widest text-zinc-500">
-                  BPM
-                </span>
-              </div>
-            </div>
           </motion.article>
         </div>
       </div>

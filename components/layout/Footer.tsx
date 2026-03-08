@@ -8,7 +8,6 @@ import {
   Instagram,
   Youtube,
   Music2,
-  ArrowRight,
 } from "lucide-react";
 import fitupLogo from "@/components/assets/Fitness_Logo__1_-removebg-preview.png";
 
@@ -52,15 +51,15 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-4 text-sm">
               {[
-                "Về Chúng Tôi",
-                "Blog Kiến Thức",
-              ].map((item, i) => (
-                <li key={i}>
+                { label: "Về Chúng Tôi", href: "/about" },
+                { label: "Blog Kiến Thức", href: "/blogs" },
+              ].map((item) => (
+                <li key={item.label}>
                   <Link
-                    href="#"
+                    href={item.href}
                     className="group flex items-center gap-2 transition-colors hover:text-[#d68c45]"
                   >
-                    <span>{item}</span>
+                    <span>{item.label}</span>
                   </Link>
                 </li>
               ))}

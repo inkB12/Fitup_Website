@@ -26,8 +26,8 @@ function KnowMoreCard({ className }: KnowMoreCardProps) {
       </p>
 
       <p className="absolute top-[63px] left-[141px] w-[166px] text-[11px] font-light tracking-[0] text-white [font-family:'Montserrat',Helvetica]">
-        Lorem ipsum dolor sit ameta, consectetur adipiscing elitaa. Sed do
-        eiusmod tempor incit ut labore et dolore magna aliqua, ut enim ad minim.
+        Personalized plans, smart progress tracking, and expert PT guidance to
+        help you reach your fitness goals faster.
       </p>
 
       <div className="absolute top-3.5 left-[275px] flex h-6 w-6 items-center justify-center rounded-full bg-white/20">
