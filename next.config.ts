@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         pathname: "/dratbz8bh/**",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+        port: "",
+        pathname: "/photos/**",
+      },
     ],
   },
 };

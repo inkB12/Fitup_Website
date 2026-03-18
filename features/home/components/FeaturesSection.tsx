@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import featureImageA from "@/components/assets/a.jpg";
+import featureImageB from "@/components/assets/b.jpg";
 import {
   CheckCircle2,
   Flame,
@@ -68,7 +70,7 @@ export default function FeaturesSection() {
               {/* Main Image */}
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-[#d68c45]/10">
                 <Image
-                  src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
+                  src={featureImageA}
                   alt="Lộ trình tập luyện AI"
                   fill
                   className="object-cover transition-transform duration-150 hover:scale-105"
@@ -180,7 +182,7 @@ export default function FeaturesSection() {
               {/* Main Image */}
               <div className="relative h-full w-full overflow-hidden rounded-[2rem] shadow-2xl shadow-[#d68c45]/10">
                 <Image
-                  src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
+                  src={featureImageB}
                   alt="Vietnamese Nutrition"
                   fill
                   className="object-cover transition-transform duration-150 hover:scale-105"
@@ -210,12 +212,12 @@ export default function FeaturesSection() {
                 <div className="mt-4 flex items-center justify-between border-t border-zinc-800 pt-4">
                   <div className="flex -space-x-2">
                     <img
-                      src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
+                      src={featureImageA.src}
                       alt="Người dùng"
                       className="h-8 w-8 rounded-full border-2 border-black"
                     />
                     <img
-                      src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
+                      src={featureImageB.src}
                       alt="Người dùng"
                       className="h-8 w-8 rounded-full border-2 border-black"
                     />

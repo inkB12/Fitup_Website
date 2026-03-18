@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { BLOG_POSTS } from "@/lib/blogs";
 
@@ -31,15 +32,24 @@ export default function BlogsPage() {
           href={`/blogs/${featuredPost.slug}`}
           className="group mb-8 grid overflow-hidden rounded-3xl border border-zinc-800 bg-[#121212] shadow-[0_16px_50px_rgba(0,0,0,0.35)] transition-all duration-200 hover:border-[#d68c45]/50 md:grid-cols-[1.2fr_1fr]"
         >
-          <div
-            className={`relative min-h-[260px] bg-gradient-to-br ${featuredPost.coverGradient} p-8`}
-          >
-            <span className="inline-flex rounded-full border border-white/30 bg-black/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-white">
-              {featuredPost.category}
-            </span>
-            <p className="mt-5 text-sm text-white/80">
-              {featuredPost.publishedAt} • {featuredPost.readTime}
-            </p>
+          <div className="relative min-h-[260px] overflow-hidden p-8">
+            <Image
+              src={featuredPost.coverImage}
+              alt={featuredPost.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 60vw"
+              className="object-cover transition-transform duration-200 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-black/10" />
+
+            <div className="relative z-10">
+              <span className="inline-flex rounded-full border border-white/30 bg-black/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-white">
+                {featuredPost.category}
+              </span>
+              <p className="mt-5 text-sm text-white/80">
+                {featuredPost.publishedAt} • {featuredPost.readTime}
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col justify-between p-8">
@@ -65,10 +75,21 @@ export default function BlogsPage() {
               href={`/blogs/${post.slug}`}
               className="group overflow-hidden rounded-3xl border border-zinc-800 bg-[#121212] transition-all duration-200 hover:-translate-y-1 hover:border-[#d68c45]/45"
             >
-              <div className={`h-44 bg-gradient-to-br ${post.coverGradient} p-5`}>
-                <span className="inline-flex rounded-full border border-white/30 bg-black/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-white">
-                  {post.category}
-                </span>
+              <div className="relative h-44 overflow-hidden p-5">
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-200 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/35" />
+
+                <div className="relative z-10">
+                  <span className="inline-flex rounded-full border border-white/30 bg-black/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-white">
+                    {post.category}
+                  </span>
+                </div>
               </div>
 
               <div className="p-6">

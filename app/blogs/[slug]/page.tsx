@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS, getBlogBySlug } from "@/lib/blogs";
 
@@ -68,7 +69,16 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           </div>
         </header>
 
-        <div className={`mt-10 h-60 rounded-3xl bg-gradient-to-br ${post.coverGradient} md:h-72`} />
+        <div className="relative mt-10 h-60 overflow-hidden rounded-3xl md:h-72">
+          <Image
+            src={post.coverImage}
+            alt={post.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 70vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-black/10" />
+        </div>
 
         <section className="mt-12 space-y-10">
           {post.sections.map((section) => (
@@ -111,7 +121,16 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
               href={`/blogs/${item.slug}`}
               className="group overflow-hidden rounded-3xl border border-zinc-800 bg-[#121212] transition-all duration-200 hover:-translate-y-1 hover:border-[#d68c45]/50"
             >
-              <div className={`h-32 bg-gradient-to-br ${item.coverGradient}`} />
+              <div className="relative h-32 overflow-hidden">
+                <Image
+                  src={item.coverImage}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-200 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/35" />
+              </div>
               <div className="p-5">
                 <p className="text-xs text-zinc-400">
                   {item.publishedAt} • {item.readTime}

@@ -62,7 +62,7 @@ export default function NewsDataSection() {
             className="group relative col-span-1 cursor-pointer overflow-hidden rounded-[2rem] border border-zinc-800 bg-zinc-900 md:col-span-2"
           >
             <Image
-              src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
+              src="https://images.pexels.com/photos/35986386/pexels-photo-35986386.jpeg"
               alt="AI posture analysis"
               fill
               className="object-cover opacity-60 transition-transform duration-150 group-hover:scale-110 group-hover:opacity-40"
@@ -124,7 +124,7 @@ export default function NewsDataSection() {
             className="group relative col-span-1 cursor-pointer overflow-hidden rounded-[2rem] border border-zinc-800 bg-zinc-900"
           >
             <Image
-              src="https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg"
+              src="https://images.pexels.com/photos/30635713/pexels-photo-30635713.jpeg"
               alt="Carb and protein ratio"
               fill
               className="object-cover opacity-60 transition-transform duration-150 group-hover:scale-110"

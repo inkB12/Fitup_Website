@@ -1,4 +1,4 @@
-export type BlogSection = {
+﻿export type BlogSection = {
   heading: string;
   paragraphs: string[];
 };
@@ -12,6 +12,7 @@ export type BlogPost = {
   readTime: string;
   category: string;
   coverGradient: string;
+  coverImage: string;
   sections: BlogSection[];
   keyTakeaways: string[];
 };
@@ -27,6 +28,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 phút đọc",
     category: "Huấn luyện AI",
     coverGradient: "from-[#d68c45]/90 via-[#96310b]/85 to-[#6b121c]/90",
+    coverImage:
+      "https://images.pexels.com/photos/31913731/pexels-photo-31913731.jpeg",
     sections: [
       {
         heading: "Điểm khác biệt của AI trong lập kế hoạch",
@@ -66,6 +69,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 phút đọc",
     category: "Dinh dưỡng",
     coverGradient: "from-[#d68c45]/80 via-[#8f4a1f]/85 to-[#6b121c]/90",
+    coverImage:
+      "https://images.pexels.com/photos/4929675/pexels-photo-4929675.jpeg",
     sections: [
       {
         heading: "Bắt đầu từ protein và calories",
@@ -105,6 +110,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 phút đọc",
     category: "Luyện tập",
     coverGradient: "from-[#c07b3c]/85 via-[#96310b]/80 to-[#6b121c]/85",
+    coverImage:
+      "https://images.pexels.com/photos/6496088/pexels-photo-6496088.jpeg",
     sections: [
       {
         heading: "Cấu trúc buổi tập 30 phút",
@@ -144,6 +151,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 phút đọc",
     category: "Phục hồi",
     coverGradient: "from-[#d68c45]/70 via-[#7a3114]/85 to-[#4d0f17]/95",
+    coverImage:
+      "https://images.pexels.com/photos/6932262/pexels-photo-6932262.jpeg",
     sections: [
       {
         heading: "Mobility không phải giãn cơ ngẫu hứng",
@@ -183,6 +192,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 phút đọc",
     category: "Hiệu suất",
     coverGradient: "from-[#b86f33]/80 via-[#8b2f0d]/90 to-[#6b121c]/95",
+    coverImage:
+      "https://images.pexels.com/photos/17543777/pexels-photo-17543777.jpeg",
     sections: [
       {
         heading: "Theo dõi đủ 3 nhóm chỉ số",
@@ -223,6 +234,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 phút đọc",
     category: "Lối sống",
     coverGradient: "from-[#d68c45]/75 via-[#8a3916]/90 to-[#5f1020]/95",
+    coverImage:
+      "https://images.pexels.com/photos/6753354/pexels-photo-6753354.jpeg",
     sections: [
       {
         heading: "Vì sao thiếu ngủ ảnh hưởng thành phần cơ thể",
@@ -262,6 +275,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 phút đọc",
     category: "Công nghệ AI",
     coverGradient: "from-[#d68c45]/85 via-[#96310b]/90 to-[#6b121c]/95",
+    coverImage:
+      "https://images.pexels.com/photos/35986386/pexels-photo-35986386.jpeg",
     sections: [
       {
         heading: "Cơ chế phát hiện sai lệch tư thế",
@@ -301,6 +316,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 phút đọc",
     category: "Dữ liệu",
     coverGradient: "from-[#d68c45]/85 via-[#8f4a1f]/85 to-[#6b121c]/95",
+    coverImage:
+      "https://images.pexels.com/photos/33999512/pexels-photo-33999512.png?cs=srgb&dl=pexels-anh-nguyen-517648218-33999512.jpg&fm=jpg",
     sections: [
       {
         heading: "Lợi thế của khẩu vị quen thuộc",
@@ -340,6 +357,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 phút đọc",
     category: "Dinh dưỡng",
     coverGradient: "from-[#d68c45]/85 via-[#9a3a12]/88 to-[#6b121c]/95",
+    coverImage:
+      "https://images.pexels.com/photos/30635713/pexels-photo-30635713.jpeg",
     sections: [
       {
         heading: "Hiểu vai trò của carb và protein",
@@ -379,6 +398,8 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 phút đọc",
     category: "Lộ trình cá nhân",
     coverGradient: "from-[#d68c45]/82 via-[#96310b]/86 to-[#6b121c]/95",
+    coverImage:
+      "https://images.pexels.com/photos/17947753/pexels-photo-17947753.jpeg",
     sections: [
       {
         heading: "Dữ liệu nào được dùng để cá nhân hóa",
@@ -413,3 +434,4 @@ export const BLOG_POSTS: BlogPost[] = [
 export function getBlogBySlug(slug: string) {
   return BLOG_POSTS.find((post) => post.slug === slug);
 }
+

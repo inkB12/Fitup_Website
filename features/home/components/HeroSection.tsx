@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import bannerImage from "@/components/assets/Banner.jpeg";
 import vector2 from "@/components/assets/vector-2.svg";
 import vector3 from "@/components/assets/vector-3.svg";
 
@@ -46,10 +47,20 @@ export default function HeroSection() {
   return (
     <section className="relative hidden w-full overflow-x-hidden pb-0 pt-6 md:block">
       <div className="relative mx-auto h-[600px] w-full max-w-[1440px]">
-        <img
+        <div
           className="absolute top-[40px] left-[calc(50.00%_-_651px)] h-[540px] w-[1302px]"
-          alt="Vector"
-          src={vector2.src}
+          aria-hidden="true"
+          style={{
+            backgroundImage: `url(${bannerImage.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            WebkitMaskImage: `url(${vector2.src})`,
+            maskImage: `url(${vector2.src})`,
+            WebkitMaskRepeat: "no-repeat",
+            maskRepeat: "no-repeat",
+            WebkitMaskSize: "100% 100%",
+            maskSize: "100% 100%",
+          }}
         />
         <KnowMoreCard className="absolute top-[440px] left-[1047px] h-[140px] w-[330px]" />
       </div>

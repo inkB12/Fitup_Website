@@ -11,8 +11,7 @@ const COACHES = [
     name: "Alex Nguyễn",
     role: "Strength & Conditioning",
     rating: "4.9",
-    image:
-      "https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg",
+    image: "/coaches/D.jfif",
     position: "left",
   },
   {
@@ -20,8 +19,7 @@ const COACHES = [
     name: "AI FITUP Coach",
     role: "24/7 Smart Assistant",
     rating: "5.0",
-    image:
-      "https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg",
+    image: "/coaches/AICoach.png",
     position: "center",
   },
   {
@@ -29,8 +27,7 @@ const COACHES = [
     name: "Sarah Trần",
     role: "Yoga & Flexibility",
     rating: "4.8",
-    image:
-      "https://res.cloudinary.com/dratbz8bh/image/upload/v1771924295/chay-bo-3-170262930243577429218_kilixq.jpg",
+    image: "/coaches/E.jfif",
     position: "right",
   },
 ];
@@ -75,8 +72,8 @@ export default function CoachesSection() {
             const positionClasses = isCenter
               ? "z-20 h-[500px] w-[340px]"
               : isLeft
-                ? "z-10 h-[400px] w-[280px] -translate-x-48 -rotate-6"
-                : "z-10 h-[400px] w-[280px] translate-x-48 rotate-6";
+                ? "z-10 h-[400px] w-[280px] -translate-x-56 -rotate-6"
+                : "z-10 h-[400px] w-[280px] translate-x-56 rotate-6";
 
             return (
               <motion.div
