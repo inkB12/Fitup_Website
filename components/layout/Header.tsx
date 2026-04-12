@@ -8,11 +8,11 @@ import { Menu, X } from "lucide-react";
 import fitupLogo from "@/components/assets/Fitness_Logo__1_-removebg-preview.png";
 
 const NAV_LINKS = [
-  { name: "ABOUT US", href: "/about" },
-  { name: "BLOG", href: "/blogs" },
+  { name: "VỀ CHÚNG TÔI", href: "/about" },
+  { name: "BÀI VIẾT", href: "/blogs" },
 ];
 
-const MOBILE_NAV_LINKS = [{ name: "HOME", href: "/" }, ...NAV_LINKS];
+const MOBILE_NAV_LINKS = [{ name: "TRANG CHỦ", href: "/" }, ...NAV_LINKS];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -93,7 +93,7 @@ export default function Header() {
             href="/download-app"
             className="relative inline-flex items-center rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] px-7 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition-all duration-150 hover:brightness-110"
           >
-            START NOW
+            TẢI ỨNG DỤNG
           </Link>
         </div>
 
@@ -101,7 +101,7 @@ export default function Header() {
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             className="p-2 text-zinc-300 transition-colors hover:text-white"
-            aria-label="Toggle menu"
+            aria-label="Mở hoặc đóng menu"
           >
             {isMobileOpen ? (
               <X className="h-6 w-6" />
@@ -137,7 +137,7 @@ export default function Header() {
                 onClick={() => setIsMobileOpen(false)}
                 className="inline-flex w-fit items-center rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] px-6 py-3 text-sm font-extrabold uppercase tracking-[0.12em] text-white transition-all duration-150 hover:brightness-110"
               >
-                START NOW
+                TẢI ỨNG DỤNG
               </Link>
             </nav>
           </motion.div>
