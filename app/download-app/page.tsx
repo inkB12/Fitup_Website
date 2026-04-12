@@ -43,9 +43,9 @@ export default function DownloadAppPage() {
             Nhấn nút bên dưới để tải về và cài đặt ứng dụng FITUP.
           </p>
           <a
-            href="https://github.com/inkB12/Fitup_Website/releases/latest/download/v1.0.0-fitup.apk"
+            href="https://github.com/inkB12/Fitup-apk/releases/latest/download/v1.0.0-fitup.apk"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-3 rounded-full bg-[linear-gradient(90deg,#d68c45_0%,#96310b_80%,#6b121c_100%)] px-8 py-4 text-base font-extrabold uppercase tracking-[0.12em] text-white transition-all duration-150 hover:brightness-110"
           >
             <Download className="h-5 w-5" />
